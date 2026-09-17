@@ -35,6 +35,21 @@ its own rights; the helper retrieves its public hash-pinned version for review.
 
 Mathlib and Lean retain their respective licenses and authorship. Linking or
 importing their declarations does not transfer those rights to this repository.
-The mathematical solution is due to L. A. Shepp; the upstream source headers
+For JSP-000422, the mathematical solution is due to L. A. Shepp; the upstream source headers
 credit Codex / GPT-5.6 Sol for their formalization. Neither is claimed as the
 repository owner's original work.
+
+## New independent JSP-000410 implementation
+
+The same newly granted MIT license also covers these new first-party files:
+
+| File | SHA-256 |
+| --- | --- |
+| `jsp-000410/JSP410GaugeCore.lean` | `6790da901ec5a196019c8f3d404b6aeb73605844446652eee956f0eb361b5bdc` |
+| `jsp-000410/JSP410IndependentClosed.lean` | `fc31d74e543c689c9c012c04529f8468e510dc80b63a7fffbf74b0f43847c5f7` |
+| `jsp-000410/Audit410Independent.lean` | `29925204d8e0b305701734dcae89cd394da264a3ac755092b61ebc44d4b9b4d1` |
+| `jsp-000410/verify.py` | `2a32f596edd62641a87a51c8e46a3fad885f6116d32ba9b54125e523fd97e089` |
+
+The new JSP410 scope, README and recipe/verification metadata are first-party documentation under this grant. Raw machine logs preserve their original evidence bytes and are not a claim to upstream authorship. The former JSP410 bridge is not included or relicensed. The new implementation was written from mathematical contracts, API declaration types, necessary data definitions and public Mathlib, with the earlier proof bodies withheld from its implementer. See [its scope and attribution](jsp-000410/SCOPE-AND-ATTRIBUTION.md).
+
+Erdos511 and Erdos229 remain unvendored external dependencies at the fixed upstream revision. No license for those files is inferred or granted. Their mathematical and formalization credit, and the limits of the upstream notice, remain unchanged.

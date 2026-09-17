@@ -1,58 +1,58 @@
-# Reproducible Lean proof for JSP-000422 / Erdős 526
+# Reproducible Lean proofs for JSP-000410 and JSP-000422
 
-This independent public repository contains the proof and evidence associated
-with [existing PR81](https://github.com/TheJustinSunPrize/awards/pull/81). It was
-prepared to keep the awards repository limited to catalog references under its
-updated contribution format. Its history starts with the selected proof package;
-it does not copy the awards repository's history or vendor upstream dependencies.
+This public repository holds independently authored bridge modules and their
+reproduction evidence for two existing catalog submissions. Upstream analytic
+sources remain immutable external references. The awards repository receives
+catalog text and references only.
 
-The final theorem is
-[`JSP422FiniteHead.unrestricted_once_exists_rearrangement`](jsp-000422/LargeArcBridge.lean).
-For nonnegative arc lengths tending to zero with divergent sum, as required by
-the original problem, it supplies a decreasing rearrangement of the positive
-terms. Almost-sure once coverage holds exactly when some original length is at
-least one or the rearranged Shepp series diverges. The proof handles zeros,
-arbitrary initial ordering, the length-one endpoint and larger lengths.
+| Problem | Complete formal result | Sources, scope and reproduction |
+| --- | --- | --- |
+| JSP-000410 / Erdős 511 | Negative resolution of the proposed uniform bound for closed polynomial-lemniscate components, using arbitrarily many components of diameter greater than 6/5 | [Package](jsp-000410/README.md), [scope and attribution](jsp-000410/SCOPE-AND-ATTRIBUTION.md), [existing PR32](https://github.com/TheJustinSunPrize/awards/pull/32) |
+| JSP-000422 / Erdős 526 | Full original-domain almost-sure once-coverage criterion in the circumference-one open-arc model, including rearrangement and all endpoints | [Package](jsp-000422/README.md), [scope and attribution](SCOPE-AND-ATTRIBUTION.md), [existing PR81](https://github.com/TheJustinSunPrize/awards/pull/81) |
 
-See [SCOPE-AND-ATTRIBUTION.md](SCOPE-AND-ATTRIBUTION.md) for the statement mapping
-and source boundaries, and [LICENSING.md](LICENSING.md) for the exact newly licensed
-first-party files. Repository ownership and PR submission are not solver credits.
-Mathematical acceptance and any eligibility decision remain with the reviewers.
+The new core, bridge, audit and reproduction work was prepared by zifanersuotang
+with Codex assistance. Mathematical credit remains with the cited authors;
+upstream formalization credit remains with its source notices. Repository
+ownership and PR submission do not establish solver credit or award eligibility.
+See [LICENSING.md](LICENSING.md) for the exact first-party MIT grant and the
+unvendored dependency boundaries.
 
-## Pinned source and evidence
+## Verification evidence
 
-All 39 files in the existing package are preserved byte for byte from awards
-fork commit `295372e187b1ce8b5d492b77244bd49a6439c866`, recorded in
-[migration-manifest.json](migration-manifest.json). Its historical verification
-record, all fifteen historical logs, fresh Windows record and twelve fresh logs
-remain unchanged. No new Lean execution is claimed solely from this migration.
+The [new JSP410 record](jsp-000410/verification.json) documents a successful
+fresh four-module compilation, audit of 24 declarations and four checker runs
+covering all four custom modules. Its nine successful logs and five earlier
+failed-attempt logs retain their original bytes. The earlier attempt compiled
+all proof sources but stopped at an audit import-syntax error; it is not counted
+as a successful replay. The new proof replaces the earlier PR32 bridge and does
+not copy that bridge's source or use its verification record.
 
-The actual fresh Windows run compiled all seven custom modules, audited 17 named
-declarations and ran four checker invocations covering all seven modules. All
-twelve stages and the serial wrapper exited zero; the reports contain only
-`propext`, `Classical.choice` and `Quot.sound`. The complete original-byte evidence
-is in [the package](jsp-000422/README.md) and
-[the fresh record](jsp-000422/e2e-windows-20260917.json).
+All 39 JSP422 package files remain byte-for-byte equal to awards fork commit
+`295372e187b1ce8b5d492b77244bd49a6439c866`, as recorded in
+[migration-manifest.json](migration-manifest.json). Historical and fresh Windows
+evidence are retained, including all original logs. That migration does not
+claim another Lean run.
 
 ## Reproduction
 
-Use Python 3.10+, Git, Lean 4.33.0 with its matching `leanchecker`, and an already
-populated Mathlib checkout at `db584cd6d46c92f209a44c0f1c829460d327499d`.
+Use Python 3.10+, Git, Lean 4.33.0 and its matching leanchecker, and an already
+cached Mathlib checkout at `db584cd6d46c92f209a44c0f1c829460d327499d`.
+Each package has its own metadata-only default, plan and explicit execution:
 
 ```sh
+python jsp-000410/verify.py
 python jsp-000422/verify.py
-python jsp-000422/verify.py --plan --mathlib /path/to/mathlib --lean-bin /path/to/lean/bin --output /path/to/fresh-output
-python jsp-000422/verify.py --execute --mathlib /path/to/mathlib --lean-bin /path/to/lean/bin --output /path/to/fresh-output
+python jsp-000410/verify.py --execute --mathlib /path/to/mathlib --lean-bin /path/to/lean/bin --output /path/to/fresh-output
 ```
 
-Quote paths containing spaces. Default mode validates the local source and
-published evidence without network or subprocesses. Explicit execution requires
-an unused output path outside the package and Mathlib checkout, downloads four
-exact hash-pinned upstream files, compiles all seven modules and the audit, and
-runs all four target checkers. It reads supplied caches without modifying them
-and does not run Lake or install a toolchain. The first failed gate stops the run.
+Quote paths with spaces and use a new output directory for each execution.
+Default mode validates sources and published evidence without subprocesses or
+network requests. Explicit execution downloads only hash-pinned dependencies,
+compiles every custom source into fresh outputs and checks actual module
+selection. It does not install a toolchain, run Lake or modify supplied caches.
+Follow each package README for its exact recipe and evidence boundaries.
 
-This is Lean's own kernel operating with imported cached Mathlib, not a separate
-kernel implementation, a full Mathlib replay, a Linux run, or a human referee
-attestation. The reproducible proof package is publicly available for review;
-no official acceptance or award is implied.
+These records use Lean's kernel and imported cached Mathlib, not an independent
+kernel, full Mathlib replay, Linux execution or human referee attestation.
+Mathematical review and any acceptance or eligibility decision remain with the
+reviewers.

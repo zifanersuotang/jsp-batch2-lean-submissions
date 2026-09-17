@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "jsp": "JSP-000410",
+  "erdos": 511,
+  "contribution_kind": "independent_gauge_bridge_v1",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lean_version": "4.33.0",
+  "lean_toolchain": "leanprover/lean4:v4.33.0",
+  "bridge_module": "JSP410IndependentClosed",
+  "main_theorem": "JSP410Independent.no_uniform_bound_for_large_closed_components",
+  "required_final_theorems": [
+    "JSP410Independent.arbitrarily_many_large_closed_components",
+    "JSP410Independent.no_uniform_bound_for_large_closed_components"
+  ],
+  "sources": [
+    {
+      "module": "ErdosProblems.Erdos229",
+      "relative_file": "ErdosProblems/Erdos229.lean",
+      "kind": "download",
+      "sha256": "15f0b332a442105a0b373e3d1105a91c5875917b17f2c27ae5994649e80d4788",
+      "git_blob_sha1": "0575ad90c3814ec8a00071a8919708d7e2775148",
+      "bytes": 110494,
+      "imports": [
+        "Mathlib"
+      ],
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos229.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos229.lean"
+    },
+    {
+      "module": "ErdosProblems.Erdos511",
+      "relative_file": "ErdosProblems/Erdos511.lean",
+      "kind": "download",
+      "sha256": "c53c3f935ceb1e1488afa7f01a3d5d45607276e221f4b686efbf68d0ad7d06df",
+      "git_blob_sha1": "81467af66b6b6f9ed19c043c0e6da6fcdcf4e1e1",
+      "bytes": 38393,
+      "imports": [
+        "ErdosProblems.Erdos229"
+      ],
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos511.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos511.lean"
+    },
+    {
+      "module": "JSP410GaugeCore",
+      "relative_file": "JSP410GaugeCore.lean",
+      "kind": "included_contribution",
+      "sha256": "6790da901ec5a196019c8f3d404b6aeb73605844446652eee956f0eb361b5bdc",
+      "bytes": 5514,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "JSP410IndependentClosed",
+      "relative_file": "JSP410IndependentClosed.lean",
+      "kind": "included_contribution",
+      "sha256": "fc31d74e543c689c9c012c04529f8468e510dc80b63a7fffbf74b0f43847c5f7",
+      "bytes": 8147,
+      "imports": [
+        "JSP410GaugeCore",
+        "ErdosProblems.Erdos511"
+      ]
+    }
+  ],
+  "build_order": [
+    "ErdosProblems.Erdos229",
+    "ErdosProblems.Erdos511",
+    "JSP410GaugeCore",
+    "JSP410IndependentClosed"
+  ],
+  "axiom_whitelist": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "audit": {
+    "module": "Audit410Independent",
+    "file": "Audit410Independent.lean",
+    "declarations": [
+      "JSP410Independent.component_subset_gauge_lt",
+      "JSP410Independent.core_subset_component",
+      "JSP410Independent.component_family_injective",
+      "JSP410Independent.component_isBounded",
+      "JSP410Independent.le_component_diam_of_core",
+      "JSP410Independent.largeComponents_embedding",
+      "JSP410Independent.closedSublevel_avoids_gauge_one",
+      "JSP410Independent.closedSublevel_component_isBounded",
+      "JSP410Independent.ConstructionAPI.approximation_exists",
+      "JSP410Independent.ConstructionAPI.continuous_gauge",
+      "JSP410Independent.ConstructionAPI.gauge_envelope",
+      "JSP410Independent.ConstructionAPI.positive_margin",
+      "JSP410Independent.ConstructionAPI.boundary_barrier",
+      "JSP410Independent.ConstructionAPI.core_isPreconnected",
+      "JSP410Independent.ConstructionAPI.center_in_core",
+      "JSP410Independent.ConstructionAPI.other_center_outside",
+      "JSP410Independent.ConstructionAPI.core_in_closedSublevel",
+      "JSP410Independent.ConstructionAPI.center_gauge_lt",
+      "JSP410Independent.ConstructionAPI.left_endpoint_in_core",
+      "JSP410Independent.ConstructionAPI.right_endpoint_in_core",
+      "JSP410Independent.ConstructionAPI.endpoint_distance",
+      "JSP410Independent.component_mem_componentsIn",
+      "JSP410Independent.arbitrarily_many_large_closed_components",
+      "JSP410Independent.no_uniform_bound_for_large_closed_components"
+    ],
+    "definitions_printed": [
+      "JSP410Independent.closedSublevel",
+      "JSP410Independent.largeComponents",
+      "Erdos511.componentsIn",
+      "JSP410Independent.ConstructionAPI.point",
+      "JSP410Independent.ConstructionAPI.height",
+      "JSP410Independent.ConstructionAPI.gauge",
+      "JSP410Independent.ConstructionAPI.core",
+      "JSP410Independent.ConstructionAPI.radius",
+      "JSP410Independent.ConstructionAPI.margin",
+      "JSP410Independent.ConstructionAPI.approxTarget",
+      "JSP410Independent.ConstructionAPI.heightHalf"
+    ],
+    "sha256": "29925204d8e0b305701734dcae89cd394da264a3ac755092b61ebc44d4b9b4d1"
+  },
+  "checker_targets": [
+    {
+      "module": "ErdosProblems.Erdos229",
+      "expected_selected_modules": [
+        "ErdosProblems.Erdos229"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos511",
+      "expected_selected_modules": [
+        "ErdosProblems.Erdos511"
+      ]
+    },
+    {
+      "module": "JSP410GaugeCore",
+      "expected_selected_modules": [
+        "JSP410GaugeCore"
+      ]
+    },
+    {
+      "module": "JSP410IndependentClosed",
+      "expected_selected_modules": [
+        "JSP410IndependentClosed"
+      ]
+    }
+  ],
+  "scope": "Independent continuous-gauge core and closed-sublevel application. The two final results exhibit arbitrarily many actual closed components with diameter >6/5 and negate the assertion that every threshold >1 admits a degree-independent bound. Upstream construction is imported through typed API contracts, with its source notices retained.",
+  "attribution_note": "New core and integration prepared by zifanersuotang with Codex assistance. This is formalization work; upstream mathematical and formalization attributions remain with the fixed sources. No original mathematical-solver or award claim."
+}

@@ -1,0 +1,658 @@
+{
+  "schema_version": 1,
+  "jsp": "JSP-000410",
+  "contribution_kind": "independent_gauge_bridge_v1",
+  "executed_helper_sha256": "2a32f596edd62641a87a51c8e46a3fad885f6116d32ba9b54125e523fd97e089",
+  "status": "verified_fresh_custom_compilation",
+  "recipe_json_sha256": "5ad58e106c89b2f018e7deb8ae1b7f017c6ad37301cf173280091b78aef90f87",
+  "fresh_custom_compilation": true,
+  "private_object_reuse": false,
+  "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "toolchain": "leanprover/lean4:v4.33.0",
+  "LEAN_NUM_THREADS": "1",
+  "runtime_binary_sha256": {
+    "lean.exe": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+    "leanchecker.exe": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce"
+  },
+  "source_sha256": {
+    "ErdosProblems.Erdos229": "15f0b332a442105a0b373e3d1105a91c5875917b17f2c27ae5994649e80d4788",
+    "ErdosProblems.Erdos511": "c53c3f935ceb1e1488afa7f01a3d5d45607276e221f4b686efbf68d0ad7d06df",
+    "JSP410GaugeCore": "6790da901ec5a196019c8f3d404b6aeb73605844446652eee956f0eb361b5bdc",
+    "JSP410IndependentClosed": "fc31d74e543c689c9c012c04529f8468e510dc80b63a7fffbf74b0f43847c5f7"
+  },
+  "audit_sha256": "29925204d8e0b305701734dcae89cd394da264a3ac755092b61ebc44d4b9b4d1",
+  "events": [
+    {
+      "stage": "compile",
+      "module": "ErdosProblems.Erdos229",
+      "start_utc": "2026-09-17T16:30:59.646012+00:00",
+      "exit_code": 0,
+      "log": "logs/00-compile-ErdosProblems.Erdos229.log",
+      "LEAN_NUM_THREADS": "1",
+      "seconds": 54.807,
+      "end_utc": "2026-09-17T16:31:54.453758+00:00",
+      "log_sha256": "bf387e184b83477d1cc4f21fb5f114af080d960c92fd72fef9bf34a8c14f4a35",
+      "log_bytes": 80,
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<BUILD>/ErdosProblems/Erdos229.olean",
+        "ErdosProblems/Erdos229.lean"
+      ]
+    },
+    {
+      "stage": "compile",
+      "module": "ErdosProblems.Erdos511",
+      "start_utc": "2026-09-17T16:31:54.456777+00:00",
+      "exit_code": 0,
+      "log": "logs/01-compile-ErdosProblems.Erdos511.log",
+      "LEAN_NUM_THREADS": "1",
+      "seconds": 23.927,
+      "end_utc": "2026-09-17T16:32:18.384104+00:00",
+      "log_sha256": "89a424b9cb861b3c4a5e75ae638f1330bd7fbd37112e8888cc3508158530064c",
+      "log_bytes": 84,
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<BUILD>/ErdosProblems/Erdos511.olean",
+        "ErdosProblems/Erdos511.lean"
+      ]
+    },
+    {
+      "stage": "compile",
+      "module": "JSP410GaugeCore",
+      "start_utc": "2026-09-17T16:32:18.387624+00:00",
+      "exit_code": 0,
+      "log": "logs/02-compile-JSP410GaugeCore.log",
+      "LEAN_NUM_THREADS": "1",
+      "seconds": 16.607,
+      "end_utc": "2026-09-17T16:32:34.994692+00:00",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "log_bytes": 0,
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<BUILD>/JSP410GaugeCore.olean",
+        "JSP410GaugeCore.lean"
+      ]
+    },
+    {
+      "stage": "compile",
+      "module": "JSP410IndependentClosed",
+      "start_utc": "2026-09-17T16:32:34.996622+00:00",
+      "exit_code": 0,
+      "log": "logs/03-compile-JSP410IndependentClosed.log",
+      "LEAN_NUM_THREADS": "1",
+      "seconds": 16.715,
+      "end_utc": "2026-09-17T16:32:51.712494+00:00",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "log_bytes": 0,
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<BUILD>/JSP410IndependentClosed.olean",
+        "JSP410IndependentClosed.lean"
+      ]
+    },
+    {
+      "stage": "audit",
+      "module": "Audit410Independent",
+      "start_utc": "2026-09-17T16:32:51.714247+00:00",
+      "exit_code": 0,
+      "log": "logs/04-audit-Audit410Independent.log",
+      "LEAN_NUM_THREADS": "1",
+      "seconds": 16.143,
+      "end_utc": "2026-09-17T16:33:07.858147+00:00",
+      "log_sha256": "21c6a2d05c1ade20f166ebf520646f1563e745fffa7f4fa2ed69c8485f0d35f9",
+      "log_bytes": 13199,
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<BUILD>/Audit410Independent.olean",
+        "Audit410Independent.lean"
+      ]
+    },
+    {
+      "stage": "leanchecker",
+      "module": "ErdosProblems.Erdos229",
+      "expected_selected_modules": [
+        "ErdosProblems.Erdos229"
+      ],
+      "start_utc": "2026-09-17T16:33:07.874276+00:00",
+      "exit_code": 0,
+      "log": "logs/05-leanchecker-ErdosProblems.Erdos229.log",
+      "LEAN_NUM_THREADS": "1",
+      "seconds": 19.044,
+      "end_utc": "2026-09-17T16:33:26.918919+00:00",
+      "log_sha256": "bbe442f81fccd700dc3e07ef3825930762e959246d715f6cc7e6fc8beee5583c",
+      "log_bytes": 33,
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/leanchecker.exe",
+        "--verbose",
+        "ErdosProblems.Erdos229"
+      ]
+    },
+    {
+      "stage": "leanchecker",
+      "module": "ErdosProblems.Erdos511",
+      "expected_selected_modules": [
+        "ErdosProblems.Erdos511"
+      ],
+      "start_utc": "2026-09-17T16:33:26.923465+00:00",
+      "exit_code": 0,
+      "log": "logs/06-leanchecker-ErdosProblems.Erdos511.log",
+      "LEAN_NUM_THREADS": "1",
+      "seconds": 18.21,
+      "end_utc": "2026-09-17T16:33:45.134284+00:00",
+      "log_sha256": "fafb81157a4c262305ee7d1a713b88d53da205ea464bee2457f3d65784cac000",
+      "log_bytes": 33,
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/leanchecker.exe",
+        "--verbose",
+        "ErdosProblems.Erdos511"
+      ]
+    },
+    {
+      "stage": "leanchecker",
+      "module": "JSP410GaugeCore",
+      "expected_selected_modules": [
+        "JSP410GaugeCore"
+      ],
+      "start_utc": "2026-09-17T16:33:45.138360+00:00",
+      "exit_code": 0,
+      "log": "logs/07-leanchecker-JSP410GaugeCore.log",
+      "LEAN_NUM_THREADS": "1",
+      "seconds": 19.856,
+      "end_utc": "2026-09-17T16:34:04.995299+00:00",
+      "log_sha256": "beff5d5c95d717bccfb0f038186aa54cf7c3275f5202aa720fd5c09f965e9c5e",
+      "log_bytes": 26,
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/leanchecker.exe",
+        "--verbose",
+        "JSP410GaugeCore"
+      ]
+    },
+    {
+      "stage": "leanchecker",
+      "module": "JSP410IndependentClosed",
+      "expected_selected_modules": [
+        "JSP410IndependentClosed"
+      ],
+      "start_utc": "2026-09-17T16:34:04.998034+00:00",
+      "exit_code": 0,
+      "log": "logs/08-leanchecker-JSP410IndependentClosed.log",
+      "LEAN_NUM_THREADS": "1",
+      "seconds": 19.665,
+      "end_utc": "2026-09-17T16:34:24.663891+00:00",
+      "log_sha256": "70510cbc53dee8e0cabc9bd35eb1430f5615da28322e747253e4f63132c741ce",
+      "log_bytes": 34,
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/leanchecker.exe",
+        "--verbose",
+        "JSP410IndependentClosed"
+      ]
+    }
+  ],
+  "actual_axioms": {
+    "JSP410Independent.component_subset_gauge_lt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.core_subset_component": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.component_family_injective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.component_isBounded": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.le_component_diam_of_core": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.largeComponents_embedding": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.closedSublevel_avoids_gauge_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.closedSublevel_component_isBounded": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.ConstructionAPI.approximation_exists": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.ConstructionAPI.continuous_gauge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.ConstructionAPI.gauge_envelope": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.ConstructionAPI.positive_margin": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.ConstructionAPI.boundary_barrier": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.ConstructionAPI.core_isPreconnected": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.ConstructionAPI.center_in_core": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.ConstructionAPI.other_center_outside": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.ConstructionAPI.core_in_closedSublevel": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.ConstructionAPI.center_gauge_lt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.ConstructionAPI.left_endpoint_in_core": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.ConstructionAPI.right_endpoint_in_core": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.ConstructionAPI.endpoint_distance": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.component_mem_componentsIn": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.arbitrarily_many_large_closed_components": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP410Independent.no_uniform_bound_for_large_closed_components": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "actual_checker_modules": {
+    "ErdosProblems.Erdos229": [
+      "ErdosProblems.Erdos229"
+    ],
+    "ErdosProblems.Erdos511": [
+      "ErdosProblems.Erdos511"
+    ],
+    "JSP410GaugeCore": [
+      "JSP410GaugeCore"
+    ],
+    "JSP410IndependentClosed": [
+      "JSP410IndependentClosed"
+    ]
+  },
+  "actual_axiom_reports_raw": {
+    "JSP410Independent.component_subset_gauge_lt": "'JSP410Independent.component_subset_gauge_lt' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]",
+    "JSP410Independent.core_subset_component": "'JSP410Independent.core_subset_component' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]",
+    "JSP410Independent.component_family_injective": "'JSP410Independent.component_family_injective' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]",
+    "JSP410Independent.component_isBounded": "'JSP410Independent.component_isBounded' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]",
+    "JSP410Independent.le_component_diam_of_core": "'JSP410Independent.le_component_diam_of_core' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]",
+    "JSP410Independent.largeComponents_embedding": "'JSP410Independent.largeComponents_embedding' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]",
+    "JSP410Independent.closedSublevel_avoids_gauge_one": "'JSP410Independent.closedSublevel_avoids_gauge_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]",
+    "JSP410Independent.closedSublevel_component_isBounded": "'JSP410Independent.closedSublevel_component_isBounded' depends on axioms: [propext,\n Classical.choice.{u},\n Quot.sound.{u}]",
+    "JSP410Independent.ConstructionAPI.approximation_exists": "'JSP410Independent.ConstructionAPI.approximation_exists' depends on axioms: [propext,\n Classical.choice.{u},\n Quot.sound.{u}]",
+    "JSP410Independent.ConstructionAPI.continuous_gauge": "'JSP410Independent.ConstructionAPI.continuous_gauge' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]",
+    "JSP410Independent.ConstructionAPI.gauge_envelope": "'JSP410Independent.ConstructionAPI.gauge_envelope' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]",
+    "JSP410Independent.ConstructionAPI.positive_margin": "'JSP410Independent.ConstructionAPI.positive_margin' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]",
+    "JSP410Independent.ConstructionAPI.boundary_barrier": "'JSP410Independent.ConstructionAPI.boundary_barrier' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]",
+    "JSP410Independent.ConstructionAPI.core_isPreconnected": "'JSP410Independent.ConstructionAPI.core_isPreconnected' depends on axioms: [propext,\n Classical.choice.{u},\n Quot.sound.{u}]",
+    "JSP410Independent.ConstructionAPI.center_in_core": "'JSP410Independent.ConstructionAPI.center_in_core' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]",
+    "JSP410Independent.ConstructionAPI.other_center_outside": "'JSP410Independent.ConstructionAPI.other_center_outside' depends on axioms: [propext,\n Classical.choice.{u},\n Quot.sound.{u}]",
+    "JSP410Independent.ConstructionAPI.core_in_closedSublevel": "'JSP410Independent.ConstructionAPI.core_in_closedSublevel' depends on axioms: [propext,\n Classical.choice.{u},\n Quot.sound.{u}]",
+    "JSP410Independent.ConstructionAPI.center_gauge_lt": "'JSP410Independent.ConstructionAPI.center_gauge_lt' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]",
+    "JSP410Independent.ConstructionAPI.left_endpoint_in_core": "'JSP410Independent.ConstructionAPI.left_endpoint_in_core' depends on axioms: [propext,\n Classical.choice.{u},\n Quot.sound.{u}]",
+    "JSP410Independent.ConstructionAPI.right_endpoint_in_core": "'JSP410Independent.ConstructionAPI.right_endpoint_in_core' depends on axioms: [propext,\n Classical.choice.{u},\n Quot.sound.{u}]",
+    "JSP410Independent.ConstructionAPI.endpoint_distance": "'JSP410Independent.ConstructionAPI.endpoint_distance' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]",
+    "JSP410Independent.component_mem_componentsIn": "'JSP410Independent.component_mem_componentsIn' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]",
+    "JSP410Independent.arbitrarily_many_large_closed_components": "'JSP410Independent.arbitrarily_many_large_closed_components' depends on axioms: [propext,\n Classical.choice.{u},\n Quot.sound.{u}]",
+    "JSP410Independent.no_uniform_bound_for_large_closed_components": "'JSP410Independent.no_uniform_bound_for_large_closed_components' depends on axioms: [propext,\n Classical.choice.{u},\n Quot.sound.{u}]"
+  },
+  "actual_definition_headers_raw": {
+    "JSP410Independent.closedSublevel": "def JSP410Independent.closedSublevel : Polynomial.{0} ℂ → Set.{0} ℂ :=",
+    "JSP410Independent.largeComponents": "def JSP410Independent.largeComponents.{u_1} : {X : Type u_1} →",
+    "Erdos511.componentsIn": "def Erdos511.componentsIn : Set.{0} ℂ → Set.{0} (Set.{0} ℂ) :=",
+    "JSP410Independent.ConstructionAPI.point": "@[reducible] def JSP410Independent.ConstructionAPI.point : ℝ → ℝ → ℂ :=",
+    "JSP410Independent.ConstructionAPI.height": "@[reducible] def JSP410Independent.ConstructionAPI.height : (k : ℕ) → Fin k → ℝ :=",
+    "JSP410Independent.ConstructionAPI.gauge": "@[reducible] def JSP410Independent.ConstructionAPI.gauge : (k : ℕ) → Fin k → ℂ → ℝ :=",
+    "JSP410Independent.ConstructionAPI.core": "@[reducible] def JSP410Independent.ConstructionAPI.core : (k : ℕ) → Fin k → Set.{0} ℂ :=",
+    "JSP410Independent.ConstructionAPI.radius": "@[reducible] def JSP410Independent.ConstructionAPI.radius : ℝ :=",
+    "JSP410Independent.ConstructionAPI.margin": "@[reducible] def JSP410Independent.ConstructionAPI.margin : ℕ → ℝ :=",
+    "JSP410Independent.ConstructionAPI.approxTarget": "@[reducible] def JSP410Independent.ConstructionAPI.approxTarget : ℕ → ℂ → ℂ :=",
+    "JSP410Independent.ConstructionAPI.heightHalf": "@[reducible] def JSP410Independent.ConstructionAPI.heightHalf : ℕ → ℝ :="
+  },
+  "build_artifacts": [
+    {
+      "file": "build/Audit410Independent.olean",
+      "sha256": "38a272f586f6edada9b1073373ae2452509b875e065a187c3b57661b6996075b",
+      "bytes": 1824
+    },
+    {
+      "file": "build/ErdosProblems/Erdos229.olean",
+      "sha256": "1bc09c807c9073bddcbbc774d7e89e6af14f1f425bb0043f05930b12dfb10e23",
+      "bytes": 3668288
+    },
+    {
+      "file": "build/ErdosProblems/Erdos511.olean",
+      "sha256": "3284d5dd66da823be8584e8df1d5be782092ba01e562ddb4ca26a190e2908fa1",
+      "bytes": 1545224
+    },
+    {
+      "file": "build/JSP410GaugeCore.olean",
+      "sha256": "3cdc701a8cd9ac9983e5d0ca50e5e78d3821ea6afbfbb01c7c6a9a85500bf8f3",
+      "bytes": 147608
+    },
+    {
+      "file": "build/JSP410IndependentClosed.olean",
+      "sha256": "a1c5f352605823fdc3f2b50aaf5d59f3f4ef36721055cd06fe350a3e7526e427",
+      "bytes": 305632
+    }
+  ],
+  "final_source_hashes_match": true,
+  "runtime_binary_hashes_unchanged": true,
+  "ended_utc": "2026-09-17T16:34:24.722687+00:00",
+  "observed_wrapper_exit_code": 0,
+  "original_private_result_sha256": "65b9b6df1289b2b15d248d206e64dbf9fc3313e3f1f69d2030060ee9e712f34a",
+  "logs": {
+    "logs/00-compile-ErdosProblems.Erdos229.log": {
+      "original_sha256": "bf387e184b83477d1cc4f21fb5f114af080d960c92fd72fef9bf34a8c14f4a35",
+      "published_sha256": "bf387e184b83477d1cc4f21fb5f114af080d960c92fd72fef9bf34a8c14f4a35",
+      "original_bytes": 80,
+      "published_bytes": 80,
+      "bytes_unchanged": true,
+      "redactions": []
+    },
+    "logs/01-compile-ErdosProblems.Erdos511.log": {
+      "original_sha256": "89a424b9cb861b3c4a5e75ae638f1330bd7fbd37112e8888cc3508158530064c",
+      "published_sha256": "89a424b9cb861b3c4a5e75ae638f1330bd7fbd37112e8888cc3508158530064c",
+      "original_bytes": 84,
+      "published_bytes": 84,
+      "bytes_unchanged": true,
+      "redactions": []
+    },
+    "logs/02-compile-JSP410GaugeCore.log": {
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_bytes": 0,
+      "published_bytes": 0,
+      "bytes_unchanged": true,
+      "redactions": []
+    },
+    "logs/03-compile-JSP410IndependentClosed.log": {
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_bytes": 0,
+      "published_bytes": 0,
+      "bytes_unchanged": true,
+      "redactions": []
+    },
+    "logs/04-audit-Audit410Independent.log": {
+      "original_sha256": "21c6a2d05c1ade20f166ebf520646f1563e745fffa7f4fa2ed69c8485f0d35f9",
+      "published_sha256": "21c6a2d05c1ade20f166ebf520646f1563e745fffa7f4fa2ed69c8485f0d35f9",
+      "original_bytes": 13199,
+      "published_bytes": 13199,
+      "bytes_unchanged": true,
+      "redactions": []
+    },
+    "logs/05-leanchecker-ErdosProblems.Erdos229.log": {
+      "original_sha256": "bbe442f81fccd700dc3e07ef3825930762e959246d715f6cc7e6fc8beee5583c",
+      "published_sha256": "bbe442f81fccd700dc3e07ef3825930762e959246d715f6cc7e6fc8beee5583c",
+      "original_bytes": 33,
+      "published_bytes": 33,
+      "bytes_unchanged": true,
+      "redactions": []
+    },
+    "logs/06-leanchecker-ErdosProblems.Erdos511.log": {
+      "original_sha256": "fafb81157a4c262305ee7d1a713b88d53da205ea464bee2457f3d65784cac000",
+      "published_sha256": "fafb81157a4c262305ee7d1a713b88d53da205ea464bee2457f3d65784cac000",
+      "original_bytes": 33,
+      "published_bytes": 33,
+      "bytes_unchanged": true,
+      "redactions": []
+    },
+    "logs/07-leanchecker-JSP410GaugeCore.log": {
+      "original_sha256": "beff5d5c95d717bccfb0f038186aa54cf7c3275f5202aa720fd5c09f965e9c5e",
+      "published_sha256": "beff5d5c95d717bccfb0f038186aa54cf7c3275f5202aa720fd5c09f965e9c5e",
+      "original_bytes": 26,
+      "published_bytes": 26,
+      "bytes_unchanged": true,
+      "redactions": []
+    },
+    "logs/08-leanchecker-JSP410IndependentClosed.log": {
+      "original_sha256": "70510cbc53dee8e0cabc9bd35eb1430f5615da28322e747253e4f63132c741ce",
+      "published_sha256": "70510cbc53dee8e0cabc9bd35eb1430f5615da28322e747253e4f63132c741ce",
+      "original_bytes": 34,
+      "published_bytes": 34,
+      "bytes_unchanged": true,
+      "redactions": []
+    },
+    "logs/fresh-001/00-compile-ErdosProblems.Erdos229.log": {
+      "original_sha256": "bf387e184b83477d1cc4f21fb5f114af080d960c92fd72fef9bf34a8c14f4a35",
+      "published_sha256": "bf387e184b83477d1cc4f21fb5f114af080d960c92fd72fef9bf34a8c14f4a35",
+      "original_bytes": 80,
+      "published_bytes": 80,
+      "bytes_unchanged": true,
+      "redactions": []
+    },
+    "logs/fresh-001/01-compile-ErdosProblems.Erdos511.log": {
+      "original_sha256": "89a424b9cb861b3c4a5e75ae638f1330bd7fbd37112e8888cc3508158530064c",
+      "published_sha256": "89a424b9cb861b3c4a5e75ae638f1330bd7fbd37112e8888cc3508158530064c",
+      "original_bytes": 84,
+      "published_bytes": 84,
+      "bytes_unchanged": true,
+      "redactions": []
+    },
+    "logs/fresh-001/02-compile-JSP410GaugeCore.log": {
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_bytes": 0,
+      "published_bytes": 0,
+      "bytes_unchanged": true,
+      "redactions": []
+    },
+    "logs/fresh-001/03-compile-JSP410IndependentClosed.log": {
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_bytes": 0,
+      "published_bytes": 0,
+      "bytes_unchanged": true,
+      "redactions": []
+    },
+    "logs/fresh-001/04-audit-Audit410Independent.log": {
+      "original_sha256": "86ba7a5d6a71cb87b21a4ad88ef8c5e4319f7ebbcc47f87d1e806584d3ca96b3",
+      "published_sha256": "86ba7a5d6a71cb87b21a4ad88ef8c5e4319f7ebbcc47f87d1e806584d3ca96b3",
+      "original_bytes": 7771,
+      "published_bytes": 7771,
+      "bytes_unchanged": true,
+      "redactions": []
+    }
+  },
+  "failed_attempts": [
+    {
+      "stage": "compile",
+      "module": "ErdosProblems.Erdos229",
+      "start_utc": "2026-09-17T16:26:13.918807+00:00",
+      "exit_code": 0,
+      "log": "logs/fresh-001/00-compile-ErdosProblems.Erdos229.log",
+      "LEAN_NUM_THREADS": "1",
+      "seconds": 58.328,
+      "end_utc": "2026-09-17T16:27:12.247350+00:00",
+      "log_sha256": "bf387e184b83477d1cc4f21fb5f114af080d960c92fd72fef9bf34a8c14f4a35",
+      "log_bytes": 80,
+      "attempt": "fresh-001",
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<BUILD>/ErdosProblems/Erdos229.olean",
+        "ErdosProblems/Erdos229.lean"
+      ]
+    },
+    {
+      "stage": "compile",
+      "module": "ErdosProblems.Erdos511",
+      "start_utc": "2026-09-17T16:27:12.258765+00:00",
+      "exit_code": 0,
+      "log": "logs/fresh-001/01-compile-ErdosProblems.Erdos511.log",
+      "LEAN_NUM_THREADS": "1",
+      "seconds": 23.696,
+      "end_utc": "2026-09-17T16:27:35.955003+00:00",
+      "log_sha256": "89a424b9cb861b3c4a5e75ae638f1330bd7fbd37112e8888cc3508158530064c",
+      "log_bytes": 84,
+      "attempt": "fresh-001",
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<BUILD>/ErdosProblems/Erdos511.olean",
+        "ErdosProblems/Erdos511.lean"
+      ]
+    },
+    {
+      "stage": "compile",
+      "module": "JSP410GaugeCore",
+      "start_utc": "2026-09-17T16:27:35.964951+00:00",
+      "exit_code": 0,
+      "log": "logs/fresh-001/02-compile-JSP410GaugeCore.log",
+      "LEAN_NUM_THREADS": "1",
+      "seconds": 17.46,
+      "end_utc": "2026-09-17T16:27:53.425569+00:00",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "log_bytes": 0,
+      "attempt": "fresh-001",
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<BUILD>/JSP410GaugeCore.olean",
+        "JSP410GaugeCore.lean"
+      ]
+    },
+    {
+      "stage": "compile",
+      "module": "JSP410IndependentClosed",
+      "start_utc": "2026-09-17T16:27:53.427397+00:00",
+      "exit_code": 0,
+      "log": "logs/fresh-001/03-compile-JSP410IndependentClosed.log",
+      "LEAN_NUM_THREADS": "1",
+      "seconds": 17.344,
+      "end_utc": "2026-09-17T16:28:10.771600+00:00",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "log_bytes": 0,
+      "attempt": "fresh-001",
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<BUILD>/JSP410IndependentClosed.olean",
+        "JSP410IndependentClosed.lean"
+      ]
+    },
+    {
+      "stage": "audit",
+      "module": "Audit410Independent",
+      "start_utc": "2026-09-17T16:28:10.773522+00:00",
+      "exit_code": 1,
+      "log": "logs/fresh-001/04-audit-Audit410Independent.log",
+      "LEAN_NUM_THREADS": "1",
+      "seconds": 15.781,
+      "end_utc": "2026-09-17T16:28:26.555346+00:00",
+      "log_sha256": "86ba7a5d6a71cb87b21a4ad88ef8c5e4319f7ebbcc47f87d1e806584d3ca96b3",
+      "log_bytes": 7771,
+      "attempt": "fresh-001",
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<BUILD>/Audit410Independent.olean",
+        "Audit410Independent.lean"
+      ]
+    }
+  ],
+  "prior_attempts": [
+    {
+      "attempt": "fresh-001",
+      "status": "failed",
+      "observed_wrapper_exit_code": 1,
+      "reason": "Audit source used multiple imports on one line; Lean rejected its syntax. Checker stages were not reached.",
+      "original_private_result_sha256": "00c85c91892608ddadc0056b138cb1d22a11bed6a7a9cfdcd31f9421c780c249",
+      "executed_helper_sha256": "a9a9639482ad80b9ad4c347a676d9647f68241bffdc284bb8d777e841d42ab6f",
+      "recipe_json_sha256": "45d4898386123dc968b7b827099f8a58c41cdea221733d2ab8317453ee8a7631",
+      "audit_sha256": "6e2677415437e3a22c9789ccc836b9461cf3fbb0033b93ded10684a33a6fe698",
+      "source_sha256": {
+        "ErdosProblems.Erdos229": "15f0b332a442105a0b373e3d1105a91c5875917b17f2c27ae5994649e80d4788",
+        "ErdosProblems.Erdos511": "c53c3f935ceb1e1488afa7f01a3d5d45607276e221f4b686efbf68d0ad7d06df",
+        "JSP410GaugeCore": "6790da901ec5a196019c8f3d404b6aeb73605844446652eee956f0eb361b5bdc",
+        "JSP410IndependentClosed": "fc31d74e543c689c9c012c04529f8468e510dc80b63a7fffbf74b0f43847c5f7"
+      }
+    }
+  ],
+  "redaction_notes": [
+    "Only absolute executable/output paths in structured command copies were replaced by placeholders.",
+    "All nine successful stage logs and all five earlier failed-attempt stage logs are published byte for byte; no stage-log redaction.",
+    "The unmodified private execution result is retained under original_private_result_sha256."
+  ]
+}

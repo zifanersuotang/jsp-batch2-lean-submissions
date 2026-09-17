@@ -1,0 +1,205 @@
+def JSP410Independent.closedSublevel : Polynomial.{0} ℂ → Set.{0} ℂ :=
+fun p => Set.ofPred.{0} fun z => LE.le.{0} (norm.{0} (Polynomial.eval.{0} z p)) 1
+def JSP410Independent.largeComponents.{u_1} : {X : Type u_1} →
+  [PseudoMetricSpace.{u_1} X] → Set.{u_1} X → ℝ → Set.{u_1} (Set.{u_1} X) :=
+fun {X} [PseudoMetricSpace.{u_1} X] S d =>
+  Set.ofPred.{u_1} fun C =>
+    (∃ c, Membership.mem.{u_1, u_1} S c ∧ Eq.{u_1 + 1} C (connectedComponentIn.{u_1} S c)) ∧
+      LE.le.{0} d (Metric.diam.{u_1} C)
+def Erdos511.componentsIn : Set.{0} ℂ → Set.{0} (Set.{0} ℂ) :=
+fun s => Set.ofPred.{0} fun C => ∃ x, Eq.{1} C (Set.image.{0, 0} Subtype.val.{1} (connectedComponent.{0} x))
+@[reducible] def JSP410Independent.ConstructionAPI.point : ℝ → ℝ → ℂ :=
+Erdos511.mkPoint✝
+@[reducible] def JSP410Independent.ConstructionAPI.height : (k : ℕ) → Fin k → ℝ :=
+Erdos511.centerHeight✝
+@[reducible] def JSP410Independent.ConstructionAPI.gauge : (k : ℕ) → Fin k → ℂ → ℝ :=
+Erdos511.boxGauge✝
+@[reducible] def JSP410Independent.ConstructionAPI.core : (k : ℕ) → Fin k → Set.{0} ℂ :=
+Erdos511.coreSegment✝
+@[reducible] def JSP410Independent.ConstructionAPI.radius : ℝ :=
+Erdos511.constructionRadius✝
+@[reducible] def JSP410Independent.ConstructionAPI.margin : ℕ → ℝ :=
+Erdos511.barrierMargin✝
+@[reducible] def JSP410Independent.ConstructionAPI.approxTarget : ℕ → ℂ → ℂ :=
+Erdos511.target✝
+@[reducible] def JSP410Independent.ConstructionAPI.heightHalf : ℕ → ℝ :=
+Erdos511.halfHeight✝
+@JSP410Independent.component_subset_gauge_lt.{u_1} : ∀ {X : Type u_1} [inst : TopologicalSpace.{u_1} X]
+  {S : Set.{u_1} X} {c : X} {g : X → ℝ},
+  Continuous.{u_1, 0} g →
+    (∀ (x : X), Membership.mem.{u_1, u_1} S x → Ne.{1} (g x) 1) →
+      Membership.mem.{u_1, u_1} S c →
+        LT.lt.{0} (g c) 1 → connectedComponentIn.{u_1} S c ⊆ Set.ofPred.{u_1} fun x => LT.lt.{0} (g x) 1
+'JSP410Independent.component_subset_gauge_lt' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@JSP410Independent.core_subset_component.{u_1} : ∀ {X : Type u_1} [inst : TopologicalSpace.{u_1} X] {S K : Set.{u_1} X}
+  {c : X}, IsPreconnected.{u_1} K → Membership.mem.{u_1, u_1} K c → K ⊆ S → K ⊆ connectedComponentIn.{u_1} S c
+'JSP410Independent.core_subset_component' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@JSP410Independent.component_family_injective.{u_1,
+    u_2} : ∀ {X : Type u_1} [inst : TopologicalSpace.{u_1} X] {I : Type u_2} {S : Set.{u_1} X} (c : I → X)
+  (g : I → X → ℝ),
+  (∀ (i : I), Continuous.{u_1, 0} (g i)) →
+    (∀ (i : I) (x : X), Membership.mem.{u_1, u_1} S x → Ne.{1} (g i x) 1) →
+      (∀ (i : I), Membership.mem.{u_1, u_1} S (c i)) →
+        (∀ (i : I), LT.lt.{0} (g i (c i)) 1) →
+          (∀ (i j : I), Ne.{u_2 + 1} i j → ¬LT.lt.{0} (g i (c j)) 1) →
+            Function.Injective.{u_2 + 1, u_1 + 1} fun i => connectedComponentIn.{u_1} S (c i)
+'JSP410Independent.component_family_injective' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@JSP410Independent.component_isBounded.{u_1} : ∀ {X : Type u_1} [inst : PseudoMetricSpace.{u_1} X] {S A : Set.{u_1} X}
+  {c : X} {g : X → ℝ},
+  Continuous.{u_1, 0} g →
+    (∀ (x : X), Membership.mem.{u_1, u_1} S x → Ne.{1} (g x) 1) →
+      Membership.mem.{u_1, u_1} S c →
+        LT.lt.{0} (g c) 1 →
+          Bornology.IsBounded.{u_1} A →
+            (∀ (x : X), LT.lt.{0} (g x) 1 → Membership.mem.{u_1, u_1} A x) →
+              Bornology.IsBounded.{u_1} (connectedComponentIn.{u_1} S c)
+'JSP410Independent.component_isBounded' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@JSP410Independent.le_component_diam_of_core.{u_1} : ∀ {X : Type u_1} [inst : PseudoMetricSpace.{u_1} X]
+  {S K : Set.{u_1} X} {c a b : X} {d : ℝ},
+  IsPreconnected.{u_1} K →
+    Membership.mem.{u_1, u_1} K c →
+      K ⊆ S →
+        Bornology.IsBounded.{u_1} (connectedComponentIn.{u_1} S c) →
+          Membership.mem.{u_1, u_1} K a →
+            Membership.mem.{u_1, u_1} K b →
+              LE.le.{0} d (dist.{u_1} a b) → LE.le.{0} d (Metric.diam.{u_1} (connectedComponentIn.{u_1} S c))
+'JSP410Independent.le_component_diam_of_core' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@JSP410Independent.largeComponents_embedding.{u_1,
+    u_2} : ∀ {X : Type u_1} [inst : PseudoMetricSpace.{u_1} X] {I : Type u_2} {S : Set.{u_1} X} {d : ℝ} (c : I → X),
+  (∀ (i : I), Membership.mem.{u_1, u_1} S (c i)) →
+    (Function.Injective.{u_2 + 1, u_1 + 1} fun i => connectedComponentIn.{u_1} S (c i)) →
+      (∀ (i : I), LE.le.{0} d (Metric.diam.{u_1} (connectedComponentIn.{u_1} S (c i)))) →
+        Nonempty.{max (u_1 + 1) (u_2 + 1)}
+          (Function.Embedding.{u_2 + 1, u_1 + 1} I
+            (Subtype.{u_1 + 1} fun C => Membership.mem.{u_1, u_1} (JSP410Independent.largeComponents.{u_1} S d) C))
+'JSP410Independent.largeComponents_embedding' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@JSP410Independent.closedSublevel_avoids_gauge_one : ∀ {p : Polynomial.{0} ℂ} {T : ℂ → ℂ} {g : ℂ → ℝ} {R δ : ℝ},
+  LT.lt.{0} 0 δ →
+    (∀ (z : ℂ),
+        LE.le.{0} (norm.{0} z) R →
+          LT.lt.{0} (norm.{0} (HSub.hSub.{0, 0, 0} (Polynomial.eval.{0} z p) (T z))) (HDiv.hDiv.{0, 0, 0} δ 2)) →
+      (∀ (z : ℂ), LE.le.{0} (g z) 1 → LE.le.{0} (norm.{0} z) R) →
+        (∀ (z : ℂ), Eq.{1} (g z) 1 → LE.le.{0} (HAdd.hAdd.{0, 0, 0} 1 δ) (norm.{0} (T z))) →
+          ∀ (z : ℂ), Membership.mem.{0, 0} (JSP410Independent.closedSublevel p) z → Ne.{1} (g z) 1
+'JSP410Independent.closedSublevel_avoids_gauge_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@JSP410Independent.closedSublevel_component_isBounded : ∀ {p : Polynomial.{0} ℂ} {c : ℂ} {g : ℂ → ℝ} {R : ℝ},
+  Continuous.{0, 0} g →
+    (∀ (z : ℂ), Membership.mem.{0, 0} (JSP410Independent.closedSublevel p) z → Ne.{1} (g z) 1) →
+      Membership.mem.{0, 0} (JSP410Independent.closedSublevel p) c →
+        LT.lt.{0} (g c) 1 →
+          (∀ (z : ℂ), LE.le.{0} (g z) 1 → LE.le.{0} (norm.{0} z) R) →
+            Bornology.IsBounded.{0} (connectedComponentIn.{0} (JSP410Independent.closedSublevel p) c)
+'JSP410Independent.closedSublevel_component_isBounded' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+JSP410Independent.ConstructionAPI.approximation_exists : ∀ (k : ℕ),
+  ∃ p,
+    Polynomial.Monic.{0} p ∧
+      ∀ (z : ℂ),
+        LE.le.{0} (norm.{0} z) JSP410Independent.ConstructionAPI.radius →
+          LT.lt.{0}
+            (norm.{0}
+              (HSub.hSub.{0, 0, 0} (Polynomial.eval.{0} z p) (JSP410Independent.ConstructionAPI.approxTarget k z)))
+            (HDiv.hDiv.{0, 0, 0} (JSP410Independent.ConstructionAPI.margin k) 2)
+'JSP410Independent.ConstructionAPI.approximation_exists' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+JSP410Independent.ConstructionAPI.continuous_gauge : ∀ (k : ℕ) (j : Fin k),
+  Continuous.{0, 0} (JSP410Independent.ConstructionAPI.gauge k j)
+'JSP410Independent.ConstructionAPI.continuous_gauge' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+JSP410Independent.ConstructionAPI.gauge_envelope : ∀ (k : ℕ) (j : Fin k) (z : ℂ),
+  LE.le.{0} (JSP410Independent.ConstructionAPI.gauge k j z) 1 →
+    LE.le.{0} (norm.{0} z) JSP410Independent.ConstructionAPI.radius
+'JSP410Independent.ConstructionAPI.gauge_envelope' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+JSP410Independent.ConstructionAPI.positive_margin : ∀ (k : ℕ), LT.lt.{0} 0 (JSP410Independent.ConstructionAPI.margin k)
+'JSP410Independent.ConstructionAPI.positive_margin' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+JSP410Independent.ConstructionAPI.boundary_barrier : ∀ (k : ℕ) (j : Fin k) (z : ℂ),
+  Eq.{1} (JSP410Independent.ConstructionAPI.gauge k j z) 1 →
+    LE.le.{0} (HAdd.hAdd.{0, 0, 0} 1 (JSP410Independent.ConstructionAPI.margin k))
+      (norm.{0} (JSP410Independent.ConstructionAPI.approxTarget k z))
+'JSP410Independent.ConstructionAPI.boundary_barrier' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+JSP410Independent.ConstructionAPI.core_isPreconnected : ∀ (k : ℕ) (j : Fin k),
+  IsPreconnected.{0} (JSP410Independent.ConstructionAPI.core k j)
+'JSP410Independent.ConstructionAPI.core_isPreconnected' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+JSP410Independent.ConstructionAPI.center_in_core : ∀ (k : ℕ) (j : Fin k),
+  Membership.mem.{0, 0} (JSP410Independent.ConstructionAPI.core k j)
+    (JSP410Independent.ConstructionAPI.point 0 (JSP410Independent.ConstructionAPI.height k j))
+'JSP410Independent.ConstructionAPI.center_in_core' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+JSP410Independent.ConstructionAPI.other_center_outside : ∀ (k : ℕ) (i j : Fin k),
+  Ne.{1} i j →
+    ¬LT.lt.{0}
+        (JSP410Independent.ConstructionAPI.gauge k i
+          (JSP410Independent.ConstructionAPI.point 0 (JSP410Independent.ConstructionAPI.height k j)))
+        1
+'JSP410Independent.ConstructionAPI.other_center_outside' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+JSP410Independent.ConstructionAPI.core_in_closedSublevel : ∀ (k : ℕ) (p : Polynomial.{0} ℂ),
+  (∀ (z : ℂ),
+      LE.le.{0} (norm.{0} z) JSP410Independent.ConstructionAPI.radius →
+        LT.lt.{0}
+          (norm.{0}
+            (HSub.hSub.{0, 0, 0} (Polynomial.eval.{0} z p) (JSP410Independent.ConstructionAPI.approxTarget k z)))
+          (HDiv.hDiv.{0, 0, 0} (JSP410Independent.ConstructionAPI.margin k) 2)) →
+    ∀ (j : Fin k), JSP410Independent.ConstructionAPI.core k j ⊆ JSP410Independent.closedSublevel p
+'JSP410Independent.ConstructionAPI.core_in_closedSublevel' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+JSP410Independent.ConstructionAPI.center_gauge_lt : ∀ (k : ℕ) (j : Fin k),
+  LT.lt.{0}
+    (JSP410Independent.ConstructionAPI.gauge k j
+      (JSP410Independent.ConstructionAPI.point 0 (JSP410Independent.ConstructionAPI.height k j)))
+    1
+'JSP410Independent.ConstructionAPI.center_gauge_lt' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+JSP410Independent.ConstructionAPI.left_endpoint_in_core : ∀ (k : ℕ) (j : Fin k),
+  Membership.mem.{0, 0} (JSP410Independent.ConstructionAPI.core k j)
+    (JSP410Independent.ConstructionAPI.point (Neg.neg.{0} (5 / 8)) (JSP410Independent.ConstructionAPI.height k j))
+'JSP410Independent.ConstructionAPI.left_endpoint_in_core' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+JSP410Independent.ConstructionAPI.right_endpoint_in_core : ∀ (k : ℕ) (j : Fin k),
+  Membership.mem.{0, 0} (JSP410Independent.ConstructionAPI.core k j)
+    (JSP410Independent.ConstructionAPI.point (5 / 8) (JSP410Independent.ConstructionAPI.height k j))
+'JSP410Independent.ConstructionAPI.right_endpoint_in_core' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+JSP410Independent.ConstructionAPI.endpoint_distance : ∀ (y : ℝ),
+  Eq.{1}
+    (dist.{0} (JSP410Independent.ConstructionAPI.point (Neg.neg.{0} (5 / 8)) y)
+      (JSP410Independent.ConstructionAPI.point (5 / 8) y))
+    (5 / 4)
+'JSP410Independent.ConstructionAPI.endpoint_distance' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@JSP410Independent.component_mem_componentsIn : ∀ {S : Set.{0} ℂ} {c : ℂ},
+  Membership.mem.{0, 0} S c → Membership.mem.{0, 0} (Erdos511.componentsIn S) (connectedComponentIn.{0} S c)
+'JSP410Independent.component_mem_componentsIn' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+JSP410Independent.arbitrarily_many_large_closed_components : ∀ (N : ℕ),
+  ∃ p,
+    Polynomial.Monic.{0} p ∧
+      ∃ family,
+        Function.Injective.{1, 1} family ∧
+          ∀ (i : Fin N),
+            Membership.mem.{0, 0}
+                (Erdos511.componentsIn (Set.ofPred.{0} fun z => LE.le.{0} (norm.{0} (Polynomial.eval.{0} z p)) 1))
+                (family i) ∧
+              LT.lt.{0} (6 / 5) (Metric.diam.{0} (family i))
+'JSP410Independent.arbitrarily_many_large_closed_components' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+JSP410Independent.no_uniform_bound_for_large_closed_components : ¬∀ (d : ℝ),
+    LT.lt.{0} 1 d →
+      ∃ B,
+        ∀ (p : Polynomial.{0} ℂ),
+          Polynomial.Monic.{0} p →
+            ¬∃ family,
+                Function.Injective.{1, 1} family ∧
+                  ∀ (i : Fin (HAdd.hAdd.{0, 0, 0} B 1)),
+                    Membership.mem.{0, 0}
+                        (Erdos511.componentsIn
+                          (Set.ofPred.{0} fun z => LE.le.{0} (norm.{0} (Polynomial.eval.{0} z p)) 1))
+                        (family i) ∧
+                      LT.lt.{0} d (Metric.diam.{0} (family i))
+'JSP410Independent.no_uniform_bound_for_large_closed_components' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

@@ -1,5 +1,5 @@
 {
-  "scope": "Exact-byte migration of the existing JSP422 proof and evidence package. No awards repository history or upstream proof source is included. JSP410 is excluded pending source-rights clarification.",
+  "scope": "Exact-byte archive of the existing JSP422 proof and evidence package only. The separately added JSP410 package is a new independently implemented and freshly verified bridge; the former adapted JSP410 bridge is not included. No awards repository history or upstream proof source is vendored.",
   "files": [
     {
       "package": "jsp-000422",
