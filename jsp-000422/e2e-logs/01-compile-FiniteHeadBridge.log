@@ -1,0 +1,2 @@
+'JSP422FiniteHead.measure_coversFrom_eq_one_of_once' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP422FiniteHead.once_eq_one_iff_full_eq_one' depends on axioms: [propext, Classical.choice, Quot.sound]

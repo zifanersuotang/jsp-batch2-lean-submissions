@@ -1,0 +1,69 @@
+LargeArcBridge.lean:52:62: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat Erdos526.Circle 1
+numerals are polymorphic in Lean, but the numeral `1` cannot be used in a context where the expected type is
+  Erdos526.Circle
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+LargeArcBridge.lean:53:10: error: Type mismatch
+  Eq.symm (AddCircle.coe_add_period 1 (-(1 / 2)))
+has type
+  ↑(-(1 / 2)) = ↑(-(1 / 2) + 1)
+but is expected to have type
+  -↑(1 / 2) = -↑(1 / 2) + 1
+LargeArcBridge.lean:54:47: error: unsolved goals
+r : ℝ
+hd : 1 / 2 ≤ ‖↑r‖
+hu : ‖↑r‖ ≤ 1 / 2
+habs : -(r - ↑(round r)) = 1 / 2
+hround : ↑↑(round r) = 0
+hclass : ↑(-(1 / 2)) = ↑r
+hr : ¬0 ≤ r - ↑(round r)
+hneg : r - ↑(round r) = -(1 / 2)
+⊢ -↑(1 / 2) + 1 = ↑(1 / 2)
+LargeArcBridge.lean:50:91: error: unsolved goals
+r : ℝ
+hd : 1 / 2 ≤ ‖↑r‖
+hu : ‖↑r‖ ≤ 1 / 2
+habs : -(r - ↑(round r)) = 1 / 2
+hround : ↑↑(round r) = 0
+hclass : ↑(-(1 / 2)) = ↑r
+hr : ¬0 ≤ r - ↑(round r)
+hneg : r - ↑(round r) = -(1 / 2)
+⊢ OfNat Erdos526.Circle 1
+LargeArcBridge.lean:81:4: error: Type mismatch: After simplification, term
+  hb
+ has type
+  @Summable ℝ ℕ Real.instAddCommMonoid PseudoMetricSpace.toUniformSpace.toTopologicalSpace (sequenceTail a N)
+    (SummationFilter.unconditional ℕ)
+but is expected to have type
+  @Summable ℝ ℕ Real.instAddCommGroup.toAddCommMonoid PseudoMetricSpace.toUniformSpace.toTopologicalSpace
+    (fun n => a (n + N)) (SummationFilter.unconditional ℕ)
+LargeArcBridge.lean:92:4: error: Tactic `apply` failed: could not unify the conclusion of `ae_of_ae_map
+  (Measurable.aemeasurable (measurable_sampleTail N))`
+  ∀ᵐ (x : Sample) ∂?m.202, ?m.203 (sampleTail N x)
+with the goal
+  ∀ᵐ (ω : Sample) ∂sampleMeasure, ∃ n, x ∈ arc (sampleTail N ω n) (b n)
+
+Note: The full type of `ae_of_ae_map (Measurable.aemeasurable (measurable_sampleTail N))` is
+  (∀ᵐ (y : Sample) ∂Measure.map (sampleTail N) ?m.202, ?m.203 y) → ∀ᵐ (x : Sample) ∂?m.202, ?m.203 (sampleTail N x)
+
+a : ℕ → ℝ
+N : ℕ
+ha₀ : ∀ (n : ℕ), 0 ≤ a n
+ha₁ : ∀ (n : ℕ), N ≤ n → a n ≤ 1
+hdiv : ¬Summable a
+x : Erdos526.Circle
+b : ℕ → ℝ := sequenceTail a N
+hb₀ : ∀ (n : ℕ), 0 ≤ b n
+hb₁ : ∀ (n : ℕ), b n ≤ 1
+hbdiv : ¬Summable b
+hlim : ∀ᵐ (τ : Sample) ∂sampleMeasure, τ ∈ limsup (hitEvent b x) atTop
+hhit : ∀ᵐ (τ : Sample) ∂sampleMeasure, ∃ n, x ∈ arc (τ n) (b n)
+⊢ ∀ᵐ (ω : Sample) ∂sampleMeasure, ∃ n, x ∈ arc (sampleTail N ω n) (b n)
+'JSP422FiniteHead.once_eq_one_of_unit_arc' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JSP422FiniteHead.unrestricted_once_criterion' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JSP422FiniteHead.unrestricted_once_exists_rearrangement' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

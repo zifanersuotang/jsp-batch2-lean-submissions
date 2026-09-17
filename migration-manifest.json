@@ -1,0 +1,317 @@
+{
+  "scope": "Exact-byte migration of the existing JSP422 proof and evidence package. No awards repository history or upstream proof source is included. JSP410 is excluded pending source-rights clarification.",
+  "files": [
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/.gitattributes",
+      "external_path": "jsp-000422/.gitattributes",
+      "bytes": 120,
+      "sha256": "a3f187b3a07e9e1db817e1e73e7c449fdaa7e4bdbdce06e69a3ba4579198815a"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/.gitignore",
+      "external_path": "jsp-000422/.gitignore",
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/Audit526Bridge.lean",
+      "external_path": "jsp-000422/Audit526Bridge.lean",
+      "bytes": 2065,
+      "sha256": "c1fa71fbb801b2fa6ae32bcfe4afcedc46eaf6e07336631d98acf2539fb62d89"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/FiniteHeadBridge.lean",
+      "external_path": "jsp-000422/FiniteHeadBridge.lean",
+      "bytes": 7815,
+      "sha256": "fd698364426e7c4b17a9033bee19f2dfdc220775de9549b80acd9bcab533e728"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/LargeArcBridge.lean",
+      "external_path": "jsp-000422/LargeArcBridge.lean",
+      "bytes": 9406,
+      "sha256": "132de51db0f2ee4eea092788f941df3112e48c7d2741a6597c4d9a217d5382b9"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/README.md",
+      "external_path": "jsp-000422/README.md",
+      "bytes": 8555,
+      "sha256": "56daa74f2be8b1de6384139cb8bda011de0b762aeebcd560e2146629b9fecc87"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/StrictOnceCriterion.lean",
+      "external_path": "jsp-000422/StrictOnceCriterion.lean",
+      "bytes": 901,
+      "sha256": "fc2888a6b794acfbcc5256d3945ee40f4b20ed15df62030d16eee0577cdda7ea"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/e2e-logs/00-compile-ErdosProblems.Erdos526.Core.log",
+      "external_path": "jsp-000422/e2e-logs/00-compile-ErdosProblems.Erdos526.Core.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/e2e-logs/01-compile-FiniteHeadBridge.log",
+      "external_path": "jsp-000422/e2e-logs/01-compile-FiniteHeadBridge.log",
+      "bytes": 218,
+      "sha256": "400544e6a6d19abd2c370d73f2ede7900915befc243ad6ce3e2e7455b01ee694"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/e2e-logs/02-compile-ErdosProblems.Erdos526.Weighted.log",
+      "external_path": "jsp-000422/e2e-logs/02-compile-ErdosProblems.Erdos526.Weighted.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/e2e-logs/03-compile-ErdosProblems.Erdos526.Shepp.log",
+      "external_path": "jsp-000422/e2e-logs/03-compile-ErdosProblems.Erdos526.Shepp.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/e2e-logs/04-compile-ErdosProblems.Erdos526.log",
+      "external_path": "jsp-000422/e2e-logs/04-compile-ErdosProblems.Erdos526.log",
+      "bytes": 80,
+      "sha256": "18c2a784b73bc69ee7e5ec58b806422c50e587f76d4e7f405c1b06eb37461ef3"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/e2e-logs/05-compile-StrictOnceCriterion.log",
+      "external_path": "jsp-000422/e2e-logs/05-compile-StrictOnceCriterion.log",
+      "bytes": 100,
+      "sha256": "e1732e261c77a68750e3a5eb927430d0c39bdcfdf0be6881541474e40273ea9a"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/e2e-logs/06-compile-LargeArcBridge.log",
+      "external_path": "jsp-000422/e2e-logs/06-compile-LargeArcBridge.log",
+      "bytes": 325,
+      "sha256": "d9b489a3e2216397754618d27d569718f30a78be459cb655964c71293dfcc961"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/e2e-logs/07-audit-Audit526Bridge.log",
+      "external_path": "jsp-000422/e2e-logs/07-audit-Audit526Bridge.log",
+      "bytes": 6865,
+      "sha256": "37fbeff7ba184e3d46426ac6be5ad6dfc686e96711629f6a66255449e47034b3"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/e2e-logs/08-leanchecker-ErdosProblems.Erdos526.log",
+      "external_path": "jsp-000422/e2e-logs/08-leanchecker-ErdosProblems.Erdos526.log",
+      "bytes": 152,
+      "sha256": "9f88b32ab94de3a62ef6fb3787ac6b36e402e64ce700ebb77dc96617ffdaec61"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/e2e-logs/09-leanchecker-FiniteHeadBridge.log",
+      "external_path": "jsp-000422/e2e-logs/09-leanchecker-FiniteHeadBridge.log",
+      "bytes": 27,
+      "sha256": "2d9e2c08058ca63ee075e96e90cf136883868b70539f24db1fb9f8d8f1f6d126"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/e2e-logs/10-leanchecker-StrictOnceCriterion.log",
+      "external_path": "jsp-000422/e2e-logs/10-leanchecker-StrictOnceCriterion.log",
+      "bytes": 30,
+      "sha256": "a01b1a3e0f0d5aabc66a48fab269e0594d30ce27f6b816fc9586852e6472daa6"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/e2e-logs/11-leanchecker-LargeArcBridge.log",
+      "external_path": "jsp-000422/e2e-logs/11-leanchecker-LargeArcBridge.log",
+      "bytes": 25,
+      "sha256": "d1213466eb38f66c1f9c2fdc2adb2e5fba105e30cb1c95d6c7615309fda9cfef"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/e2e-windows-20260917.json",
+      "external_path": "jsp-000422/e2e-windows-20260917.json",
+      "bytes": 27684,
+      "sha256": "504b7e23130ad652a6741b80bbda10183726bd15f1777621ceef1896379f740e"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/logs/v2-failed-01-compile-FiniteHeadBridge.log",
+      "external_path": "jsp-000422/logs/v2-failed-01-compile-FiniteHeadBridge.log",
+      "bytes": 2329,
+      "sha256": "c124234c0ae2563fd66b6d76a261d0ade46407e3d2b7b9cb99d1f1d02d03aa4b"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/logs/v3-failed-01-compile-FiniteHeadBridge.log",
+      "external_path": "jsp-000422/logs/v3-failed-01-compile-FiniteHeadBridge.log",
+      "bytes": 303,
+      "sha256": "50673cebf1dd87d3322fd2a572d2c2880d026edc9141e4ae51b6f555f2cd79f2"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/logs/v4-00-compile-ErdosProblems.Erdos526.Core.log",
+      "external_path": "jsp-000422/logs/v4-00-compile-ErdosProblems.Erdos526.Core.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/logs/v4-01-compile-FiniteHeadBridge.log",
+      "external_path": "jsp-000422/logs/v4-01-compile-FiniteHeadBridge.log",
+      "bytes": 218,
+      "sha256": "400544e6a6d19abd2c370d73f2ede7900915befc243ad6ce3e2e7455b01ee694"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/logs/v4-02-compile-ErdosProblems.Erdos526.Weighted.log",
+      "external_path": "jsp-000422/logs/v4-02-compile-ErdosProblems.Erdos526.Weighted.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/logs/v4-03-compile-ErdosProblems.Erdos526.Shepp.log",
+      "external_path": "jsp-000422/logs/v4-03-compile-ErdosProblems.Erdos526.Shepp.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/logs/v4-04-compile-ErdosProblems.Erdos526.log",
+      "external_path": "jsp-000422/logs/v4-04-compile-ErdosProblems.Erdos526.log",
+      "bytes": 80,
+      "sha256": "18c2a784b73bc69ee7e5ec58b806422c50e587f76d4e7f405c1b06eb37461ef3"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/logs/v4-05-compile-StrictOnceCriterion.log",
+      "external_path": "jsp-000422/logs/v4-05-compile-StrictOnceCriterion.log",
+      "bytes": 100,
+      "sha256": "e1732e261c77a68750e3a5eb927430d0c39bdcfdf0be6881541474e40273ea9a"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/logs/v4-failed-06-compile-LargeArcBridge.log",
+      "external_path": "jsp-000422/logs/v4-failed-06-compile-LargeArcBridge.log",
+      "bytes": 3070,
+      "sha256": "25030b6392127967ddc5c436b31d592dbd7086dd73774658c87cc06f8fe41278"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/logs/v5-06-compile-LargeArcBridge.log",
+      "external_path": "jsp-000422/logs/v5-06-compile-LargeArcBridge.log",
+      "bytes": 325,
+      "sha256": "d9b489a3e2216397754618d27d569718f30a78be459cb655964c71293dfcc961"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/logs/v5-07-audit-Audit526Bridge.log",
+      "external_path": "jsp-000422/logs/v5-07-audit-Audit526Bridge.log",
+      "bytes": 6865,
+      "sha256": "37fbeff7ba184e3d46426ac6be5ad6dfc686e96711629f6a66255449e47034b3"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/logs/v5-08-leanchecker-ErdosProblems.Erdos526.log",
+      "external_path": "jsp-000422/logs/v5-08-leanchecker-ErdosProblems.Erdos526.log",
+      "bytes": 152,
+      "sha256": "9f88b32ab94de3a62ef6fb3787ac6b36e402e64ce700ebb77dc96617ffdaec61"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/logs/v5-09-leanchecker-FiniteHeadBridge.log",
+      "external_path": "jsp-000422/logs/v5-09-leanchecker-FiniteHeadBridge.log",
+      "bytes": 27,
+      "sha256": "2d9e2c08058ca63ee075e96e90cf136883868b70539f24db1fb9f8d8f1f6d126"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/logs/v5-10-leanchecker-StrictOnceCriterion.log",
+      "external_path": "jsp-000422/logs/v5-10-leanchecker-StrictOnceCriterion.log",
+      "bytes": 30,
+      "sha256": "a01b1a3e0f0d5aabc66a48fab269e0594d30ce27f6b816fc9586852e6472daa6"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/logs/v5-11-leanchecker-LargeArcBridge.log",
+      "external_path": "jsp-000422/logs/v5-11-leanchecker-LargeArcBridge.log",
+      "bytes": 25,
+      "sha256": "d1213466eb38f66c1f9c2fdc2adb2e5fba105e30cb1c95d6c7615309fda9cfef"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/recipe-checks.json",
+      "external_path": "jsp-000422/recipe-checks.json",
+      "bytes": 3582,
+      "sha256": "482cae99750f9b23d2537400a1b0e8d003ad922b3cb4fd70ad479d2d40940387"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/upstream.json",
+      "external_path": "jsp-000422/upstream.json",
+      "bytes": 7720,
+      "sha256": "e50d722260caebe03beb35a738baa45486c812ac313739c5ee63d2eda610e019"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/verification.json",
+      "external_path": "jsp-000422/verification.json",
+      "bytes": 22192,
+      "sha256": "8806abe46d9a0fd0bbfd3efcf758642a38fcf080d4ced7dda85c5cd44efc6bc1"
+    },
+    {
+      "package": "jsp-000422",
+      "original_commit": "295372e187b1ce8b5d492b77244bd49a6439c866",
+      "original_path": "submissions/jsp-000422/verify.py",
+      "external_path": "jsp-000422/verify.py",
+      "bytes": 20124,
+      "sha256": "84cb46b4579ad5e6fec12697c09e9c065d324f23186d539b537c275a35622bce"
+    }
+  ]
+}

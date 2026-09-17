@@ -1,0 +1,60 @@
+import LargeArcBridge
+
+#print Erdos526.arc
+#print Erdos526.CoversFrom
+#print Erdos526.CoversOnce
+#print Erdos526.CoversInfinitelyOften
+#print Erdos526.IsDecreasingRearrangement
+#print JSP422FiniteHead.splice
+#print JSP422FiniteHead.antipode
+
+#check Erdos526.erdos_526_resolution_for_rearrangement
+#print axioms Erdos526.erdos_526_resolution_for_rearrangement
+
+#check JSP422FiniteHead.map_splice
+#print axioms JSP422FiniteHead.map_splice
+
+#check JSP422FiniteHead.measureReal_head_miss
+#print axioms JSP422FiniteHead.measureReal_head_miss
+
+#check JSP422FiniteHead.head_miss_positive
+#print axioms JSP422FiniteHead.head_miss_positive
+
+#check JSP422FiniteHead.coversFrom_of_ae_spliced_once
+#print axioms JSP422FiniteHead.coversFrom_of_ae_spliced_once
+
+#check JSP422FiniteHead.measure_coversFrom_eq_one_of_once
+#print axioms JSP422FiniteHead.measure_coversFrom_eq_one_of_once
+
+#check JSP422FiniteHead.once_eq_one_iff_full_eq_one
+#print axioms JSP422FiniteHead.once_eq_one_iff_full_eq_one
+
+#check JSP422FiniteHead.strict_once_criterion
+#print axioms JSP422FiniteHead.strict_once_criterion
+
+#check JSP422FiniteHead.circle_dist_le_half
+#print axioms JSP422FiniteHead.circle_dist_le_half
+
+#check JSP422FiniteHead.eq_half_of_norm_ge
+#print axioms JSP422FiniteHead.eq_half_of_norm_ge
+
+#check JSP422FiniteHead.eq_antipode_of_not_mem_unit_arc
+#print axioms JSP422FiniteHead.eq_antipode_of_not_mem_unit_arc
+
+#check JSP422FiniteHead.ae_fixedPoint_tail_hit
+#print axioms JSP422FiniteHead.ae_fixedPoint_tail_hit
+
+#check JSP422FiniteHead.once_eq_one_of_unit_arc
+#print axioms JSP422FiniteHead.once_eq_one_of_unit_arc
+
+#check JSP422FiniteHead.once_eq_one_of_large_arc
+#print axioms JSP422FiniteHead.once_eq_one_of_large_arc
+
+#check JSP422FiniteHead.once_eq_one_of_exists_ge_one
+#print axioms JSP422FiniteHead.once_eq_one_of_exists_ge_one
+
+#check JSP422FiniteHead.unrestricted_once_criterion
+#print axioms JSP422FiniteHead.unrestricted_once_criterion
+
+#check JSP422FiniteHead.unrestricted_once_exists_rearrangement
+#print axioms JSP422FiniteHead.unrestricted_once_exists_rearrangement

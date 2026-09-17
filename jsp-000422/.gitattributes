@@ -1,0 +1,4 @@
+* text eol=lf
+*.lean -text
+# Preserve machine-output evidence, including diagnostic whitespace.
+*.log -text -whitespace

@@ -1,0 +1,536 @@
+{
+  "schema_version": 1,
+  "status": "verified",
+  "jsp": "JSP-000422",
+  "upstream_json_sha256": "e50d722260caebe03beb35a738baa45486c812ac313739c5ee63d2eda610e019",
+  "private_verification_sha256": "d12e9f1456342acfd8155901d80d5b3bf4f872569605aa1a23c691fe4a01f04c",
+  "original_plan_sha256": "74bb74181c223428c827decd81c087bb0b2d831806d4a381a6f74c59298849e6",
+  "original_result_sha256": "f2a21d61e21599ae658906006edeccc189931c9722ea818fb0bf712b38f34b39",
+  "candidate_sha256": {
+    "FiniteHeadBridge": "fd698364426e7c4b17a9033bee19f2dfdc220775de9549b80acd9bcab533e728",
+    "StrictOnceCriterion": "fc2888a6b794acfbcc5256d3945ee40f4b20ed15df62030d16eee0577cdda7ea",
+    "LargeArcBridge": "132de51db0f2ee4eea092788f941df3112e48c7d2741a6597c4d9a217d5382b9"
+  },
+  "audit_sha256": "c1fa71fbb801b2fa6ae32bcfe4afcedc46eaf6e07336631d98acf2539fb62d89",
+  "original_platform": "Windows; Lean 4.33.0",
+  "observed_wrapper_exit_code": 0,
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lean_toolchain": "leanprover/lean4:v4.33.0",
+  "requested_threads": "LEAN_NUM_THREADS=1; compiler/audit -j1",
+  "requested_compile_memory_mb": 8192,
+  "checker_memory_flag_claim": false,
+  "new_v5_process_count": 6,
+  "reused_v4_compilation_event_count": 6,
+  "events": [
+    {
+      "stage": "compile",
+      "module": "ErdosProblems.Erdos526.Core",
+      "start_utc": "2026-09-16T13:33:53.915589+00:00",
+      "end_utc": "2026-09-16T13:34:25.698129+00:00",
+      "seconds": 31.782,
+      "exit_code": 0,
+      "origin_attempt": "v4",
+      "recorded_command_with_paths_redacted": [
+        "lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<BUILD>/ErdosProblems/Erdos526/Core.olean",
+        "ErdosProblems/Erdos526/Core.lean"
+      ],
+      "log": "logs/v4-00-compile-ErdosProblems.Erdos526.Core.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "stage": "compile",
+      "module": "FiniteHeadBridge",
+      "start_utc": "2026-09-16T13:34:25.699556+00:00",
+      "end_utc": "2026-09-16T13:34:40.981487+00:00",
+      "seconds": 15.281,
+      "exit_code": 0,
+      "origin_attempt": "v4",
+      "recorded_command_with_paths_redacted": [
+        "lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<BUILD>/FiniteHeadBridge.olean",
+        "FiniteHeadBridge.lean"
+      ],
+      "log": "logs/v4-01-compile-FiniteHeadBridge.log",
+      "log_sha256": "400544e6a6d19abd2c370d73f2ede7900915befc243ad6ce3e2e7455b01ee694"
+    },
+    {
+      "stage": "compile",
+      "module": "ErdosProblems.Erdos526.Weighted",
+      "start_utc": "2026-09-16T13:34:40.989947+00:00",
+      "end_utc": "2026-09-16T13:34:56.500093+00:00",
+      "seconds": 15.51,
+      "exit_code": 0,
+      "origin_attempt": "v4",
+      "recorded_command_with_paths_redacted": [
+        "lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<BUILD>/ErdosProblems/Erdos526/Weighted.olean",
+        "ErdosProblems/Erdos526/Weighted.lean"
+      ],
+      "log": "logs/v4-02-compile-ErdosProblems.Erdos526.Weighted.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "stage": "compile",
+      "module": "ErdosProblems.Erdos526.Shepp",
+      "start_utc": "2026-09-16T13:34:56.501643+00:00",
+      "end_utc": "2026-09-16T13:35:20.295003+00:00",
+      "seconds": 23.793,
+      "exit_code": 0,
+      "origin_attempt": "v4",
+      "recorded_command_with_paths_redacted": [
+        "lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<BUILD>/ErdosProblems/Erdos526/Shepp.olean",
+        "ErdosProblems/Erdos526/Shepp.lean"
+      ],
+      "log": "logs/v4-03-compile-ErdosProblems.Erdos526.Shepp.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "stage": "compile",
+      "module": "ErdosProblems.Erdos526",
+      "start_utc": "2026-09-16T13:35:20.296281+00:00",
+      "end_utc": "2026-09-16T13:35:35.259975+00:00",
+      "seconds": 14.963,
+      "exit_code": 0,
+      "origin_attempt": "v4",
+      "recorded_command_with_paths_redacted": [
+        "lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<BUILD>/ErdosProblems/Erdos526.olean",
+        "ErdosProblems/Erdos526.lean"
+      ],
+      "log": "logs/v4-04-compile-ErdosProblems.Erdos526.log",
+      "log_sha256": "18c2a784b73bc69ee7e5ec58b806422c50e587f76d4e7f405c1b06eb37461ef3"
+    },
+    {
+      "stage": "compile",
+      "module": "StrictOnceCriterion",
+      "start_utc": "2026-09-16T13:35:35.268558+00:00",
+      "end_utc": "2026-09-16T13:35:50.190889+00:00",
+      "seconds": 14.92,
+      "exit_code": 0,
+      "origin_attempt": "v4",
+      "recorded_command_with_paths_redacted": [
+        "lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<BUILD>/StrictOnceCriterion.olean",
+        "StrictOnceCriterion.lean"
+      ],
+      "log": "logs/v4-05-compile-StrictOnceCriterion.log",
+      "log_sha256": "e1732e261c77a68750e3a5eb927430d0c39bdcfdf0be6881541474e40273ea9a"
+    },
+    {
+      "stage": "compile",
+      "module": "LargeArcBridge",
+      "start_utc": "2026-09-16T13:41:08.314394+00:00",
+      "end_utc": "2026-09-16T13:41:25.182985+00:00",
+      "seconds": 16.868,
+      "exit_code": 0,
+      "origin_attempt": "v5",
+      "recorded_command_with_paths_redacted": [
+        "lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<BUILD>/LargeArcBridge.olean",
+        "LargeArcBridge.lean"
+      ],
+      "log": "logs/v5-06-compile-LargeArcBridge.log",
+      "log_sha256": "d9b489a3e2216397754618d27d569718f30a78be459cb655964c71293dfcc961"
+    },
+    {
+      "stage": "audit",
+      "module": "Audit526Bridge",
+      "start_utc": "2026-09-16T13:41:25.190843+00:00",
+      "end_utc": "2026-09-16T13:41:39.889972+00:00",
+      "seconds": 14.699,
+      "exit_code": 0,
+      "origin_attempt": "v5",
+      "recorded_command_with_paths_redacted": [
+        "lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<BUILD>/Audit526Bridge.olean",
+        "Audit526Bridge.lean"
+      ],
+      "log": "logs/v5-07-audit-Audit526Bridge.log",
+      "log_sha256": "37fbeff7ba184e3d46426ac6be5ad6dfc686e96711629f6a66255449e47034b3"
+    },
+    {
+      "stage": "leanchecker",
+      "module": "ErdosProblems.Erdos526",
+      "start_utc": "2026-09-16T13:41:39.903227+00:00",
+      "end_utc": "2026-09-16T13:42:13.877400+00:00",
+      "seconds": 33.972,
+      "exit_code": 0,
+      "origin_attempt": "v5",
+      "recorded_command_with_paths_redacted": [
+        "leanchecker.exe",
+        "--verbose",
+        "ErdosProblems.Erdos526"
+      ],
+      "log": "logs/v5-08-leanchecker-ErdosProblems.Erdos526.log",
+      "log_sha256": "9f88b32ab94de3a62ef6fb3787ac6b36e402e64ce700ebb77dc96617ffdaec61"
+    },
+    {
+      "stage": "leanchecker",
+      "module": "FiniteHeadBridge",
+      "start_utc": "2026-09-16T13:42:13.887864+00:00",
+      "end_utc": "2026-09-16T13:42:27.500920+00:00",
+      "seconds": 13.613,
+      "exit_code": 0,
+      "origin_attempt": "v5",
+      "recorded_command_with_paths_redacted": [
+        "leanchecker.exe",
+        "--verbose",
+        "FiniteHeadBridge"
+      ],
+      "log": "logs/v5-09-leanchecker-FiniteHeadBridge.log",
+      "log_sha256": "2d9e2c08058ca63ee075e96e90cf136883868b70539f24db1fb9f8d8f1f6d126"
+    },
+    {
+      "stage": "leanchecker",
+      "module": "StrictOnceCriterion",
+      "start_utc": "2026-09-16T13:42:27.508491+00:00",
+      "end_utc": "2026-09-16T13:42:41.610847+00:00",
+      "seconds": 14.102,
+      "exit_code": 0,
+      "origin_attempt": "v5",
+      "recorded_command_with_paths_redacted": [
+        "leanchecker.exe",
+        "--verbose",
+        "StrictOnceCriterion"
+      ],
+      "log": "logs/v5-10-leanchecker-StrictOnceCriterion.log",
+      "log_sha256": "a01b1a3e0f0d5aabc66a48fab269e0594d30ce27f6b816fc9586852e6472daa6"
+    },
+    {
+      "stage": "leanchecker",
+      "module": "LargeArcBridge",
+      "start_utc": "2026-09-16T13:42:41.618332+00:00",
+      "end_utc": "2026-09-16T13:42:55.279093+00:00",
+      "seconds": 13.66,
+      "exit_code": 0,
+      "origin_attempt": "v5",
+      "recorded_command_with_paths_redacted": [
+        "leanchecker.exe",
+        "--verbose",
+        "LargeArcBridge"
+      ],
+      "log": "logs/v5-11-leanchecker-LargeArcBridge.log",
+      "log_sha256": "d1213466eb38f66c1f9c2fdc2adb2e5fba105e30cb1c95d6c7615309fda9cfef"
+    }
+  ],
+  "failed_attempts": [
+    {
+      "attempt": "v2",
+      "stage": "compile",
+      "module": "FiniteHeadBridge",
+      "exit_code": 1,
+      "log": "logs/v2-failed-01-compile-FiniteHeadBridge.log",
+      "log_sha256": "c124234c0ae2563fd66b6d76a261d0ade46407e3d2b7b9cb99d1f1d02d03aa4b",
+      "status": "historical_failure_not_verification_evidence"
+    },
+    {
+      "attempt": "v3",
+      "stage": "compile",
+      "module": "FiniteHeadBridge",
+      "exit_code": 1,
+      "log": "logs/v3-failed-01-compile-FiniteHeadBridge.log",
+      "log_sha256": "50673cebf1dd87d3322fd2a572d2c2880d026edc9141e4ae51b6f555f2cd79f2",
+      "status": "historical_failure_not_verification_evidence"
+    },
+    {
+      "attempt": "v4",
+      "stage": "compile",
+      "module": "LargeArcBridge",
+      "exit_code": 1,
+      "log": "logs/v4-failed-06-compile-LargeArcBridge.log",
+      "log_sha256": "25030b6392127967ddc5c436b31d592dbd7086dd73774658c87cc06f8fe41278",
+      "status": "historical_failure_not_verification_evidence"
+    }
+  ],
+  "compiled_object_sha256": {
+    "ErdosProblems.Erdos526.Core": "18d5fb71b846bc4229de2d2aff69434f15459e877c80a41722b24b453061b256",
+    "FiniteHeadBridge": "7565705f257404a0d44810288d7cbba2723e361e73d470a098f64729ca64fe5f",
+    "ErdosProblems.Erdos526.Weighted": "89c204fec51979be1e48d37975a80e737584a598094d17a0f4c9c1d0240c3bb0",
+    "ErdosProblems.Erdos526.Shepp": "615630e3684cb1d7388b3c4b6182a317dfd9041e4b2564ea95555a9769c6a36c",
+    "ErdosProblems.Erdos526": "19ca7ed137daeb8402ecfcc0713b4ecc21c479606b13799d2e6f8e5b2f185443",
+    "StrictOnceCriterion": "3231e1bd95435fd6b8fbed3874b73d8fb6f2db030cc9bc81a2b7120768e8c4fb",
+    "LargeArcBridge": "05042c2da760d38e0600962a283e0cbac5e20234bf41634ee687524604808a60"
+  },
+  "runtime_binary_sha256_from_original_run": {
+    "lean.exe": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+    "leanchecker.exe": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce"
+  },
+  "actual_axioms": {
+    "Erdos526.erdos_526_resolution_for_rearrangement": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.map_splice": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.measureReal_head_miss": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.head_miss_positive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.coversFrom_of_ae_spliced_once": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.measure_coversFrom_eq_one_of_once": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.once_eq_one_iff_full_eq_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.strict_once_criterion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.circle_dist_le_half": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.eq_half_of_norm_ge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.eq_antipode_of_not_mem_unit_arc": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.ae_fixedPoint_tail_hit": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.once_eq_one_of_unit_arc": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.once_eq_one_of_large_arc": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.once_eq_one_of_exists_ge_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.unrestricted_once_criterion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.unrestricted_once_exists_rearrangement": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "actual_axiom_reports_raw": {
+    "Erdos526.erdos_526_resolution_for_rearrangement": "'Erdos526.erdos_526_resolution_for_rearrangement' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.map_splice": "'JSP422FiniteHead.map_splice' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.measureReal_head_miss": "'JSP422FiniteHead.measureReal_head_miss' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.head_miss_positive": "'JSP422FiniteHead.head_miss_positive' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.coversFrom_of_ae_spliced_once": "'JSP422FiniteHead.coversFrom_of_ae_spliced_once' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.measure_coversFrom_eq_one_of_once": "'JSP422FiniteHead.measure_coversFrom_eq_one_of_once' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.once_eq_one_iff_full_eq_one": "'JSP422FiniteHead.once_eq_one_iff_full_eq_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.strict_once_criterion": "'JSP422FiniteHead.strict_once_criterion' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.circle_dist_le_half": "'JSP422FiniteHead.circle_dist_le_half' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.eq_half_of_norm_ge": "'JSP422FiniteHead.eq_half_of_norm_ge' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.eq_antipode_of_not_mem_unit_arc": "'JSP422FiniteHead.eq_antipode_of_not_mem_unit_arc' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.ae_fixedPoint_tail_hit": "'JSP422FiniteHead.ae_fixedPoint_tail_hit' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.once_eq_one_of_unit_arc": "'JSP422FiniteHead.once_eq_one_of_unit_arc' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.once_eq_one_of_large_arc": "'JSP422FiniteHead.once_eq_one_of_large_arc' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.once_eq_one_of_exists_ge_one": "'JSP422FiniteHead.once_eq_one_of_exists_ge_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.unrestricted_once_criterion": "'JSP422FiniteHead.unrestricted_once_criterion' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.unrestricted_once_exists_rearrangement": "'JSP422FiniteHead.unrestricted_once_exists_rearrangement' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  },
+  "actual_checker_modules": {
+    "ErdosProblems.Erdos526": [
+      "ErdosProblems.Erdos526",
+      "ErdosProblems.Erdos526.Weighted",
+      "ErdosProblems.Erdos526.Shepp",
+      "ErdosProblems.Erdos526.Core"
+    ],
+    "FiniteHeadBridge": [
+      "FiniteHeadBridge"
+    ],
+    "StrictOnceCriterion": [
+      "StrictOnceCriterion"
+    ],
+    "LargeArcBridge": [
+      "LargeArcBridge"
+    ]
+  },
+  "all_seven_custom_modules_replayed": true,
+  "replay_scope": "Four separate structured-Name-prefix invocations replay the four upstream custom modules and each of the three bridge roots against their imported environments. Not --fresh replay of Mathlib.",
+  "logs": {
+    "logs/v4-00-compile-ErdosProblems.Erdos526.Core.log": {
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_bytes": 0,
+      "published_bytes": 0,
+      "redactions": [],
+      "bytes_unchanged": true
+    },
+    "logs/v4-01-compile-FiniteHeadBridge.log": {
+      "original_sha256": "400544e6a6d19abd2c370d73f2ede7900915befc243ad6ce3e2e7455b01ee694",
+      "published_sha256": "400544e6a6d19abd2c370d73f2ede7900915befc243ad6ce3e2e7455b01ee694",
+      "original_bytes": 218,
+      "published_bytes": 218,
+      "redactions": [],
+      "bytes_unchanged": true
+    },
+    "logs/v4-02-compile-ErdosProblems.Erdos526.Weighted.log": {
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_bytes": 0,
+      "published_bytes": 0,
+      "redactions": [],
+      "bytes_unchanged": true
+    },
+    "logs/v4-03-compile-ErdosProblems.Erdos526.Shepp.log": {
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_bytes": 0,
+      "published_bytes": 0,
+      "redactions": [],
+      "bytes_unchanged": true
+    },
+    "logs/v4-04-compile-ErdosProblems.Erdos526.log": {
+      "original_sha256": "18c2a784b73bc69ee7e5ec58b806422c50e587f76d4e7f405c1b06eb37461ef3",
+      "published_sha256": "18c2a784b73bc69ee7e5ec58b806422c50e587f76d4e7f405c1b06eb37461ef3",
+      "original_bytes": 80,
+      "published_bytes": 80,
+      "redactions": [],
+      "bytes_unchanged": true
+    },
+    "logs/v4-05-compile-StrictOnceCriterion.log": {
+      "original_sha256": "e1732e261c77a68750e3a5eb927430d0c39bdcfdf0be6881541474e40273ea9a",
+      "published_sha256": "e1732e261c77a68750e3a5eb927430d0c39bdcfdf0be6881541474e40273ea9a",
+      "original_bytes": 100,
+      "published_bytes": 100,
+      "redactions": [],
+      "bytes_unchanged": true
+    },
+    "logs/v5-06-compile-LargeArcBridge.log": {
+      "original_sha256": "d9b489a3e2216397754618d27d569718f30a78be459cb655964c71293dfcc961",
+      "published_sha256": "d9b489a3e2216397754618d27d569718f30a78be459cb655964c71293dfcc961",
+      "original_bytes": 325,
+      "published_bytes": 325,
+      "redactions": [],
+      "bytes_unchanged": true
+    },
+    "logs/v5-07-audit-Audit526Bridge.log": {
+      "original_sha256": "37fbeff7ba184e3d46426ac6be5ad6dfc686e96711629f6a66255449e47034b3",
+      "published_sha256": "37fbeff7ba184e3d46426ac6be5ad6dfc686e96711629f6a66255449e47034b3",
+      "original_bytes": 6865,
+      "published_bytes": 6865,
+      "redactions": [],
+      "bytes_unchanged": true
+    },
+    "logs/v5-08-leanchecker-ErdosProblems.Erdos526.log": {
+      "original_sha256": "9f88b32ab94de3a62ef6fb3787ac6b36e402e64ce700ebb77dc96617ffdaec61",
+      "published_sha256": "9f88b32ab94de3a62ef6fb3787ac6b36e402e64ce700ebb77dc96617ffdaec61",
+      "original_bytes": 152,
+      "published_bytes": 152,
+      "redactions": [],
+      "bytes_unchanged": true
+    },
+    "logs/v5-09-leanchecker-FiniteHeadBridge.log": {
+      "original_sha256": "2d9e2c08058ca63ee075e96e90cf136883868b70539f24db1fb9f8d8f1f6d126",
+      "published_sha256": "2d9e2c08058ca63ee075e96e90cf136883868b70539f24db1fb9f8d8f1f6d126",
+      "original_bytes": 27,
+      "published_bytes": 27,
+      "redactions": [],
+      "bytes_unchanged": true
+    },
+    "logs/v5-10-leanchecker-StrictOnceCriterion.log": {
+      "original_sha256": "a01b1a3e0f0d5aabc66a48fab269e0594d30ce27f6b816fc9586852e6472daa6",
+      "published_sha256": "a01b1a3e0f0d5aabc66a48fab269e0594d30ce27f6b816fc9586852e6472daa6",
+      "original_bytes": 30,
+      "published_bytes": 30,
+      "redactions": [],
+      "bytes_unchanged": true
+    },
+    "logs/v5-11-leanchecker-LargeArcBridge.log": {
+      "original_sha256": "d1213466eb38f66c1f9c2fdc2adb2e5fba105e30cb1c95d6c7615309fda9cfef",
+      "published_sha256": "d1213466eb38f66c1f9c2fdc2adb2e5fba105e30cb1c95d6c7615309fda9cfef",
+      "original_bytes": 25,
+      "published_bytes": 25,
+      "redactions": [],
+      "bytes_unchanged": true
+    },
+    "logs/v2-failed-01-compile-FiniteHeadBridge.log": {
+      "original_sha256": "c124234c0ae2563fd66b6d76a261d0ade46407e3d2b7b9cb99d1f1d02d03aa4b",
+      "published_sha256": "c124234c0ae2563fd66b6d76a261d0ade46407e3d2b7b9cb99d1f1d02d03aa4b",
+      "original_bytes": 2329,
+      "published_bytes": 2329,
+      "redactions": [],
+      "bytes_unchanged": true
+    },
+    "logs/v3-failed-01-compile-FiniteHeadBridge.log": {
+      "original_sha256": "50673cebf1dd87d3322fd2a572d2c2880d026edc9141e4ae51b6f555f2cd79f2",
+      "published_sha256": "50673cebf1dd87d3322fd2a572d2c2880d026edc9141e4ae51b6f555f2cd79f2",
+      "original_bytes": 303,
+      "published_bytes": 303,
+      "redactions": [],
+      "bytes_unchanged": true
+    },
+    "logs/v4-failed-06-compile-LargeArcBridge.log": {
+      "original_sha256": "25030b6392127967ddc5c436b31d592dbd7086dd73774658c87cc06f8fe41278",
+      "published_sha256": "25030b6392127967ddc5c436b31d592dbd7086dd73774658c87cc06f8fe41278",
+      "original_bytes": 3070,
+      "published_bytes": 3070,
+      "redactions": [],
+      "bytes_unchanged": true
+    }
+  },
+  "privacy_transform": "Private filesystem paths are omitted from metadata and replaced by generic placeholders in recorded commands. Every exported log records both original and published SHA256 and all path-replacement counts; unchanged logs retain their original bytes.",
+  "compilation_provenance": "Core, FiniteHeadBridge, Weighted, Shepp, entry and StrictOnceCriterion were actually compiled in v4. Their final source bytes, original compile events/logs and exact copied olean bytes were checked before and after v5. LargeArcBridge was freshly compiled in v5.",
+  "future_replay": "The portable helper compiles every final custom source freshly. It does not depend on the original Windows olean artifacts or private paths.",
+  "portable_recipe_test_status": "Not executed end to end; see recipe-checks.json for metadata, negative and simulated-command tests."
+}

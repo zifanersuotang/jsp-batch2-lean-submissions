@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "jsp": "JSP-000422",
+  "erdos": 526,
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lean_toolchain": "leanprover/lean4:v4.33.0",
+  "lean_version": "4.33.0",
+  "sources": [
+    {
+      "module": "ErdosProblems.Erdos526.Core",
+      "relative_file": "ErdosProblems/Erdos526/Core.lean",
+      "sha256": "e9c17650004694011089d3e6bd0d1ce8897d9df02931f0ad5a6df4bd4551bec6",
+      "bytes": 130929,
+      "imports": [
+        "Mathlib"
+      ],
+      "kind": "download",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos526/Core.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos526/Core.lean",
+      "git_blob_sha1": "b9dd659ee3c993b1d9c215ef8a4725800823976f"
+    },
+    {
+      "module": "FiniteHeadBridge",
+      "relative_file": "FiniteHeadBridge.lean",
+      "sha256": "fd698364426e7c4b17a9033bee19f2dfdc220775de9549b80acd9bcab533e728",
+      "bytes": 7815,
+      "imports": [
+        "ErdosProblems.Erdos526.Core"
+      ],
+      "kind": "included_bridge"
+    },
+    {
+      "module": "ErdosProblems.Erdos526.Weighted",
+      "relative_file": "ErdosProblems/Erdos526/Weighted.lean",
+      "sha256": "3491ae1cc183f815eb227d9993646028155985e94dd36a7e5d2aaa8e4633eb57",
+      "bytes": 8114,
+      "imports": [
+        "Mathlib"
+      ],
+      "kind": "download",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos526/Weighted.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos526/Weighted.lean",
+      "git_blob_sha1": "1fcbf5abf7b98138f100da29596b685e4bd02691"
+    },
+    {
+      "module": "ErdosProblems.Erdos526.Shepp",
+      "relative_file": "ErdosProblems/Erdos526/Shepp.lean",
+      "sha256": "9ed140f4c5c401e812809598b7ab05584088cb8e55abafec7edf6142e85c6ab7",
+      "bytes": 108308,
+      "imports": [
+        "ErdosProblems.Erdos526.Core",
+        "ErdosProblems.Erdos526.Weighted"
+      ],
+      "kind": "download",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos526/Shepp.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos526/Shepp.lean",
+      "git_blob_sha1": "8a101d1bb69a0e8355e41bb8c6851e5d50eb8477"
+    },
+    {
+      "module": "ErdosProblems.Erdos526",
+      "relative_file": "ErdosProblems/Erdos526.lean",
+      "sha256": "34220f4246a09f4cbfd1ca406309deab2f0e1b6d719da25a4558dade6fab17cb",
+      "bytes": 2089,
+      "imports": [
+        "ErdosProblems.Erdos526.Shepp"
+      ],
+      "kind": "download",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos526.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos526.lean",
+      "git_blob_sha1": "7a805d25b8f3913aef5730b7d97502c67e20533c"
+    },
+    {
+      "module": "StrictOnceCriterion",
+      "relative_file": "StrictOnceCriterion.lean",
+      "sha256": "fc2888a6b794acfbcc5256d3945ee40f4b20ed15df62030d16eee0577cdda7ea",
+      "bytes": 901,
+      "imports": [
+        "ErdosProblems.Erdos526",
+        "FiniteHeadBridge"
+      ],
+      "kind": "included_bridge"
+    },
+    {
+      "module": "LargeArcBridge",
+      "relative_file": "LargeArcBridge.lean",
+      "sha256": "132de51db0f2ee4eea092788f941df3112e48c7d2741a6597c4d9a217d5382b9",
+      "bytes": 9406,
+      "imports": [
+        "StrictOnceCriterion"
+      ],
+      "kind": "included_bridge"
+    }
+  ],
+  "build_order": [
+    "ErdosProblems.Erdos526.Core",
+    "FiniteHeadBridge",
+    "ErdosProblems.Erdos526.Weighted",
+    "ErdosProblems.Erdos526.Shepp",
+    "ErdosProblems.Erdos526",
+    "StrictOnceCriterion",
+    "LargeArcBridge"
+  ],
+  "audit": {
+    "module": "Audit526Bridge",
+    "file": "Audit526Bridge.lean",
+    "sha256": "c1fa71fbb801b2fa6ae32bcfe4afcedc46eaf6e07336631d98acf2539fb62d89",
+    "declarations": [
+      "Erdos526.erdos_526_resolution_for_rearrangement",
+      "JSP422FiniteHead.map_splice",
+      "JSP422FiniteHead.measureReal_head_miss",
+      "JSP422FiniteHead.head_miss_positive",
+      "JSP422FiniteHead.coversFrom_of_ae_spliced_once",
+      "JSP422FiniteHead.measure_coversFrom_eq_one_of_once",
+      "JSP422FiniteHead.once_eq_one_iff_full_eq_one",
+      "JSP422FiniteHead.strict_once_criterion",
+      "JSP422FiniteHead.circle_dist_le_half",
+      "JSP422FiniteHead.eq_half_of_norm_ge",
+      "JSP422FiniteHead.eq_antipode_of_not_mem_unit_arc",
+      "JSP422FiniteHead.ae_fixedPoint_tail_hit",
+      "JSP422FiniteHead.once_eq_one_of_unit_arc",
+      "JSP422FiniteHead.once_eq_one_of_large_arc",
+      "JSP422FiniteHead.once_eq_one_of_exists_ge_one",
+      "JSP422FiniteHead.unrestricted_once_criterion",
+      "JSP422FiniteHead.unrestricted_once_exists_rearrangement"
+    ],
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "checker_targets": [
+    {
+      "module": "ErdosProblems.Erdos526",
+      "expected_selected_modules": [
+        "ErdosProblems.Erdos526.Core",
+        "ErdosProblems.Erdos526.Weighted",
+        "ErdosProblems.Erdos526.Shepp",
+        "ErdosProblems.Erdos526"
+      ]
+    },
+    {
+      "module": "FiniteHeadBridge",
+      "expected_selected_modules": [
+        "FiniteHeadBridge"
+      ]
+    },
+    {
+      "module": "StrictOnceCriterion",
+      "expected_selected_modules": [
+        "StrictOnceCriterion"
+      ]
+    },
+    {
+      "module": "LargeArcBridge",
+      "expected_selected_modules": [
+        "LargeArcBridge"
+      ]
+    }
+  ],
+  "main_theorem": "JSP422FiniteHead.unrestricted_once_exists_rearrangement",
+  "scope": "For nonnegative real lengths tending to zero with divergent sum, once coverage in the pinned open-ball unit-circle model has probability one iff some length is at least one or the Shepp condition holds for a decreasing rearrangement. The existential theorem obtains that rearrangement from the original source; the finite-prefix bridge needs 0<=a_n<1 only in the removed prefix.",
+  "scope_boundary": "This adds the missing once-versus-tail bridge and the >=1 endpoint branch in the pinned open-ball model. Shepp 1972 assumes strictly subunit lengths; the endpoint statement is explicitly an extension to the abbreviated original-problem webpage model, not an assertion about unspecified endpoint conventions in the paper.",
+  "axiom_whitelist": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "attribution": "The unchanged upstream formalization credits L. A. Shepp for the mathematics and Codex / GPT-5.6 Sol for formalization. The three included bridge files add the finite-prefix probability argument and the explicit open-arc endpoint assembly. No first-proof, priority, recipient or award-eligibility claim.",
+  "source_distribution": "The four upstream modules are referenced by immutable URLs and hashes, not included. Only three new bridges and their audit harness are included.",
+  "execution_policy": "A public replay freshly compiles all seven custom modules, then the 17-declaration audit and four target checkers in a fresh isolated output directory. It never reuses private olean artifacts or writes the supplied Mathlib cache."
+}

@@ -1,0 +1,46 @@
+FiniteHeadBridge.lean:24:4: error: Type mismatch: After simplification, term
+  Measurable.comp (measurable_pi_apply n) measurable_snd
+ has type
+  @Measurable (Sample × (ℕ → Erdos526.Circle)) Erdos526.Circle Prod.instMeasurableSpace
+    (QuotientAddGroup.measurableSpace (AddSubgroup.zmultiples 1)) ((fun f => f n) ∘ Prod.snd)
+but is expected to have type
+  @Measurable (Sample × Sample) Erdos526.Circle Prod.instMeasurableSpace
+    (QuotientAddGroup.measurableSpace (AddSubgroup.zmultiples 1)) fun x => x.2 n
+FiniteHeadBridge.lean:26:4: error: Type mismatch: After simplification, term
+  Measurable.comp (measurable_pi_apply n) measurable_fst
+ has type
+  @Measurable ((ℕ → Erdos526.Circle) × Sample) Erdos526.Circle Prod.instMeasurableSpace
+    (QuotientAddGroup.measurableSpace (AddSubgroup.zmultiples 1)) ((fun f => f n) ∘ Prod.fst)
+but is expected to have type
+  @Measurable (Sample × Sample) Erdos526.Circle Prod.instMeasurableSpace
+    (QuotientAddGroup.measurableSpace (AddSubgroup.zmultiples 1)) fun x => x.1 n
+FiniteHeadBridge.lean:67:53: error: Ambiguous term
+  Circle
+Possible interpretations:
+  _root_.Circle : Type
+  
+  Erdos526.Circle : Type
+FiniteHeadBridge.lean:99:50: error: Ambiguous term
+  Circle
+Possible interpretations:
+  _root_.Circle : Type
+  
+  Erdos526.Circle : Type
+FiniteHeadBridge.lean:107:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+FiniteHeadBridge.lean:139:8: error: (kernel) unknown constant 'JSP422FiniteHead.coversFrom_of_ae_spliced_once'
+'JSP422FiniteHead.measure_coversFrom_eq_one_of_once' depends on axioms: [propext,
+ Classical.choice,
+ measure_coversFrom_eq_one_of_once,
+ Quot.sound]
+'JSP422FiniteHead.once_eq_one_iff_full_eq_one' depends on axioms: [propext,
+ Classical.choice,
+ measure_coversFrom_eq_one_of_once,
+ Quot.sound]
+FiniteHeadBridge.lean:175:0: error: Unexpected name `JSP422FiniteHead` after `end`: The current section is unnamed
+
+Hint: Delete the name `JSP422FiniteHead` to end the current unnamed scope; outer named scopes can then be closed using additional `end` command(s):
+  end ̵J̵S̵P̵4̵2̵2̵F̵i̵n̵i̵t̵e̵H̵e̵a̵d̵

@@ -1,0 +1,80 @@
+def Erdos526.arc : Erdos526.Circle → ℝ → Set Erdos526.Circle :=
+fun z length => Metric.ball z (length / 2)
+def Erdos526.CoversFrom : (ℕ → ℝ) → Erdos526.Sample → ℕ → Prop :=
+fun a ω N => ∀ (x : Erdos526.Circle), ∃ n, N ≤ n ∧ x ∈ Erdos526.arc (ω n) (a n)
+def Erdos526.CoversOnce : (ℕ → ℝ) → Erdos526.Sample → Prop :=
+fun a ω => Erdos526.CoversFrom a ω 0
+def Erdos526.CoversInfinitelyOften : (ℕ → ℝ) → Erdos526.Sample → Prop :=
+fun a ω => ∀ (N : ℕ), Erdos526.CoversFrom a ω N
+def Erdos526.IsDecreasingRearrangement : (ℕ → ℝ) → (ℕ → ℝ) → Prop :=
+fun a b => Antitone b ∧ ∃ e, ∀ (k : ℕ), b k = a ↑(e k)
+def JSP422FiniteHead.splice : ℕ → Erdos526.Sample × Erdos526.Sample → Erdos526.Sample :=
+fun N p n => if n < N then p.2 n else p.1 n
+def JSP422FiniteHead.antipode : Erdos526.Circle → Erdos526.Circle :=
+fun z => z + ↑(1 / 2)
+Erdos526.erdos_526_resolution_for_rearrangement {a b : ℕ → ℝ} (ha₀ : ∀ (n : ℕ), 0 ≤ a n)
+  (halim : Filter.Tendsto a Filter.atTop (nhds 0)) (hdiv : ¬Summable a)
+  (hrearr : Erdos526.IsDecreasingRearrangement a b) :
+  Erdos526.sampleMeasure (Erdos526.fullCoverageEvent a) = 1 ↔ Erdos526.SheppCondition b
+'Erdos526.erdos_526_resolution_for_rearrangement' depends on axioms: [propext, Classical.choice, Quot.sound]
+JSP422FiniteHead.map_splice (N : ℕ) :
+  MeasureTheory.Measure.map (JSP422FiniteHead.splice N) (Erdos526.sampleMeasure.prod Erdos526.sampleMeasure) =
+    Erdos526.sampleMeasure
+'JSP422FiniteHead.map_splice' depends on axioms: [propext, Classical.choice, Quot.sound]
+JSP422FiniteHead.measureReal_head_miss {a : ℕ → ℝ} (N : ℕ) (x : Erdos526.Circle) (ha₀ : ∀ n < N, 0 ≤ a n)
+  (ha₁ : ∀ n < N, a n ≤ 1) :
+  Erdos526.sampleMeasure.real (⋂ n ∈ Finset.range N, Erdos526.missEvent a x n) = ∏ n ∈ Finset.range N, (1 - a n)
+'JSP422FiniteHead.measureReal_head_miss' depends on axioms: [propext, Classical.choice, Quot.sound]
+JSP422FiniteHead.head_miss_positive {a : ℕ → ℝ} (N : ℕ) (x : Erdos526.Circle) (ha₀ : ∀ n < N, 0 ≤ a n)
+  (ha₁ : ∀ n < N, a n < 1) : 0 < Erdos526.sampleMeasure.real (⋂ n ∈ Finset.range N, Erdos526.missEvent a x n)
+'JSP422FiniteHead.head_miss_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+JSP422FiniteHead.coversFrom_of_ae_spliced_once {a : ℕ → ℝ} (N : ℕ) (ω : Erdos526.Sample) (ha₀ : ∀ n < N, 0 ≤ a n)
+  (ha₁ : ∀ n < N, a n < 1)
+  (h : ∀ᵐ (ξ : Erdos526.Sample) ∂Erdos526.sampleMeasure, Erdos526.CoversOnce a (JSP422FiniteHead.splice N (ω, ξ))) :
+  Erdos526.CoversFrom a ω N
+'JSP422FiniteHead.coversFrom_of_ae_spliced_once' depends on axioms: [propext, Classical.choice, Quot.sound]
+JSP422FiniteHead.measure_coversFrom_eq_one_of_once {a : ℕ → ℝ} (N : ℕ) (ha₀ : ∀ n < N, 0 ≤ a n) (ha₁ : ∀ n < N, a n < 1)
+  (honce : Erdos526.sampleMeasure (Erdos526.onceCoverageEvent a) = 1) :
+  Erdos526.sampleMeasure (Erdos526.coversFromEvent a N) = 1
+'JSP422FiniteHead.measure_coversFrom_eq_one_of_once' depends on axioms: [propext, Classical.choice, Quot.sound]
+JSP422FiniteHead.once_eq_one_iff_full_eq_one {a : ℕ → ℝ} (ha₀ : ∀ (n : ℕ), 0 ≤ a n) (ha₁ : ∀ (n : ℕ), a n < 1) :
+  Erdos526.sampleMeasure (Erdos526.onceCoverageEvent a) = 1 ↔ Erdos526.sampleMeasure (Erdos526.fullCoverageEvent a) = 1
+'JSP422FiniteHead.once_eq_one_iff_full_eq_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+JSP422FiniteHead.strict_once_criterion {a b : ℕ → ℝ} (ha₀ : ∀ (n : ℕ), 0 ≤ a n) (ha₁ : ∀ (n : ℕ), a n < 1)
+  (halim : Filter.Tendsto a Filter.atTop (nhds 0)) (hdiv : ¬Summable a)
+  (hrearr : Erdos526.IsDecreasingRearrangement a b) :
+  Erdos526.sampleMeasure (Erdos526.onceCoverageEvent a) = 1 ↔ Erdos526.SheppCondition b
+'JSP422FiniteHead.strict_once_criterion' depends on axioms: [propext, Classical.choice, Quot.sound]
+JSP422FiniteHead.circle_dist_le_half (x z : Erdos526.Circle) : dist x z ≤ 1 / 2
+'JSP422FiniteHead.circle_dist_le_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+JSP422FiniteHead.eq_half_of_norm_ge {d : Erdos526.Circle} (hd : 1 / 2 ≤ ‖d‖) : d = ↑(1 / 2)
+'JSP422FiniteHead.eq_half_of_norm_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+JSP422FiniteHead.eq_antipode_of_not_mem_unit_arc {x z : Erdos526.Circle} (hx : x ∉ Erdos526.arc z 1) :
+  x = JSP422FiniteHead.antipode z
+'JSP422FiniteHead.eq_antipode_of_not_mem_unit_arc' depends on axioms: [propext, Classical.choice, Quot.sound]
+JSP422FiniteHead.ae_fixedPoint_tail_hit {a : ℕ → ℝ} (N : ℕ) (ha₀ : ∀ (n : ℕ), 0 ≤ a n)
+  (ha₁ : ∀ (n : ℕ), N ≤ n → a n ≤ 1) (hdiv : ¬Summable a) (x : Erdos526.Circle) :
+  ∀ᵐ (ω : Erdos526.Sample) ∂Erdos526.sampleMeasure, ∃ n, N ≤ n ∧ x ∈ Erdos526.arc (ω n) (a n)
+'JSP422FiniteHead.ae_fixedPoint_tail_hit' depends on axioms: [propext, Classical.choice, Quot.sound]
+JSP422FiniteHead.once_eq_one_of_unit_arc {a : ℕ → ℝ} (ha₀ : ∀ (n : ℕ), 0 ≤ a n)
+  (halim : Filter.Tendsto a Filter.atTop (nhds 0)) (hdiv : ¬Summable a) (k : ℕ) (hk : a k = 1) :
+  Erdos526.sampleMeasure (Erdos526.onceCoverageEvent a) = 1
+'JSP422FiniteHead.once_eq_one_of_unit_arc' depends on axioms: [propext, Classical.choice, Quot.sound]
+JSP422FiniteHead.once_eq_one_of_large_arc {a : ℕ → ℝ} (k : ℕ) (hk : 1 < a k) :
+  Erdos526.sampleMeasure (Erdos526.onceCoverageEvent a) = 1
+'JSP422FiniteHead.once_eq_one_of_large_arc' depends on axioms: [propext, Classical.choice, Quot.sound]
+JSP422FiniteHead.once_eq_one_of_exists_ge_one {a : ℕ → ℝ} (ha₀ : ∀ (n : ℕ), 0 ≤ a n)
+  (halim : Filter.Tendsto a Filter.atTop (nhds 0)) (hdiv : ¬Summable a) (hlarge : ∃ k, 1 ≤ a k) :
+  Erdos526.sampleMeasure (Erdos526.onceCoverageEvent a) = 1
+'JSP422FiniteHead.once_eq_one_of_exists_ge_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+JSP422FiniteHead.unrestricted_once_criterion {a b : ℕ → ℝ} (ha₀ : ∀ (n : ℕ), 0 ≤ a n)
+  (halim : Filter.Tendsto a Filter.atTop (nhds 0)) (hdiv : ¬Summable a)
+  (hrearr : Erdos526.IsDecreasingRearrangement a b) :
+  Erdos526.sampleMeasure (Erdos526.onceCoverageEvent a) = 1 ↔ (∃ n, 1 ≤ a n) ∨ Erdos526.SheppCondition b
+'JSP422FiniteHead.unrestricted_once_criterion' depends on axioms: [propext, Classical.choice, Quot.sound]
+JSP422FiniteHead.unrestricted_once_exists_rearrangement {a : ℕ → ℝ} (ha₀ : ∀ (n : ℕ), 0 ≤ a n)
+  (halim : Filter.Tendsto a Filter.atTop (nhds 0)) (hdiv : ¬Summable a) :
+  ∃ b,
+    Erdos526.IsDecreasingRearrangement a b ∧
+      (Erdos526.sampleMeasure (Erdos526.onceCoverageEvent a) = 1 ↔ (∃ n, 1 ≤ a n) ∨ Erdos526.SheppCondition b)
+'JSP422FiniteHead.unrestricted_once_exists_rearrangement' depends on axioms: [propext, Classical.choice, Quot.sound]

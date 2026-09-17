@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "verification_kind": "metadata, negative and mocked-process tests only",
+  "real_lean_or_checker_started": false,
+  "network_used": false,
+  "end_to_end_portable_replay_executed": false,
+  "linux_replay_claim": false,
+  "helper_sha256": "84cb46b4579ad5e6fec12697c09e9c065d324f23186d539b537c275a35622bce",
+  "upstream_sha256": "e50d722260caebe03beb35a738baa45486c812ac313739c5ee63d2eda610e019",
+  "verification_sha256": "8806abe46d9a0fd0bbfd3efcf758642a38fcf080d4ced7dda85c5cd44efc6bc1",
+  "test_count": 29,
+  "checks": [
+    {
+      "check": "default metadata/log validation performs no subprocess or network",
+      "status": "PASS"
+    },
+    {
+      "check": "default CLI remains metadata-only",
+      "status": "PASS"
+    },
+    {
+      "check": "reject unsafe path ../escape",
+      "status": "PASS"
+    },
+    {
+      "check": "reject unsafe path /absolute",
+      "status": "PASS"
+    },
+    {
+      "check": "reject unsafe path C:/host",
+      "status": "PASS"
+    },
+    {
+      "check": "reject unsafe path a\\b",
+      "status": "PASS"
+    },
+    {
+      "check": "reject unsafe path a/../b",
+      "status": "PASS"
+    },
+    {
+      "check": "reject duplicate replay lines",
+      "status": "PASS"
+    },
+    {
+      "check": "structured Name prefix excludes unrelated digits",
+      "status": "PASS"
+    },
+    {
+      "check": "reject nonstandard actual axiom",
+      "status": "PASS"
+    },
+    {
+      "check": "reject missing actual declaration report",
+      "status": "PASS"
+    },
+    {
+      "check": "explicit redirect handler refuses to create a redirected request",
+      "status": "PASS"
+    },
+    {
+      "check": "reject redirect response even if an opener returns it",
+      "status": "PASS"
+    },
+    {
+      "check": "reject non-200 download response",
+      "status": "PASS"
+    },
+    {
+      "check": "reject changed final response URL",
+      "status": "PASS"
+    },
+    {
+      "check": "accept exact pinned HTTP-200 response through the no-redirect opener",
+      "status": "PASS"
+    },
+    {
+      "check": "fresh plan has seven source compiles, one 17-declaration audit and four checkers; no execution",
+      "status": "PASS"
+    },
+    {
+      "check": "reject changed included Lean bytes",
+      "status": "PASS"
+    },
+    {
+      "check": "reject changed published log bytes",
+      "status": "PASS"
+    },
+    {
+      "check": "hash-pinned materialization preserves seven final source files and audit",
+      "status": "PASS"
+    },
+    {
+      "check": "refuse existing source target rather than overwrite",
+      "status": "PASS"
+    },
+    {
+      "check": "reject altered downloaded bytes before accepting source",
+      "status": "PASS"
+    },
+    {
+      "check": "refuse existing execution output",
+      "status": "PASS"
+    },
+    {
+      "check": "fully mocked execution follows twelve fresh processes and records all gates",
+      "status": "PASS"
+    },
+    {
+      "check": "simulated fail-fast compile",
+      "status": "PASS"
+    },
+    {
+      "check": "simulated fail-fast axiom",
+      "status": "PASS"
+    },
+    {
+      "check": "simulated fail-fast checker",
+      "status": "PASS"
+    },
+    {
+      "check": "version and Git preflight/final probes also receive LEAN_NUM_THREADS=1",
+      "status": "PASS"
+    },
+    {
+      "check": "all simulated runs leave supplied Mathlib cache byte-for-byte unchanged",
+      "status": "PASS"
+    }
+  ],
+  "limitation": "Subprocess and fetch behavior are mocked for recipe tests; these tests are not another Lean elaboration or kernel execution."
+}

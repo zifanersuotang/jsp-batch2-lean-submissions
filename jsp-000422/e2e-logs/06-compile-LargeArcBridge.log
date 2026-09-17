@@ -1,0 +1,3 @@
+'JSP422FiniteHead.once_eq_one_of_unit_arc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP422FiniteHead.unrestricted_once_criterion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP422FiniteHead.unrestricted_once_exists_rearrangement' depends on axioms: [propext, Classical.choice, Quot.sound]

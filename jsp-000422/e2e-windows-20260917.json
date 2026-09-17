@@ -1,0 +1,629 @@
+{
+  "schema_version": 1,
+  "jsp": "JSP-000422",
+  "erdos": 526,
+  "status": "verified_fresh_public_helper_e2e_windows",
+  "platform": "Windows x86_64; no Linux end-to-end claim",
+  "local_run_date": "2026-09-17",
+  "local_timezone": "Asia/Shanghai (UTC+08:00)",
+  "observed_wrapper_exit_code": 0,
+  "wrapper_exit_evidence": "Root observed session 80908 and wrapper PID 59208 finish with exit code 0; export additionally requires the exact terminal result digest and all final stage gates.",
+  "public_helper": {
+    "file": "verify.py",
+    "sha256": "84cb46b4579ad5e6fec12697c09e9c065d324f23186d539b537c275a35622bce",
+    "mode": "--execute",
+    "helper_source_unchanged": true
+  },
+  "upstream_json_sha256": "e50d722260caebe03beb35a738baa45486c812ac313739c5ee63d2eda610e019",
+  "original_private_result_sha256": "e45bd6a0e7aadbbb344496b937ebdc72202245145b859be7debfdf917a74c4dd",
+  "original_private_result_bytes": 15613,
+  "original_result_status": "verified_fresh_custom_compilation",
+  "result_redaction_policy": "The private result is represented by its digest. Only command-path metadata is replaced by neutral placeholders in this derived record. All twelve published log files retain their exact original bytes and SHA-256 values; no log content was redacted.",
+  "command_placeholders": {
+    "<LEAN_BIN>": "supplied Lean runtime directory",
+    "<OUTPUT>": "fresh isolated run directory"
+  },
+  "command_working_directory": "<OUTPUT>/src",
+  "start_utc": "2026-09-16T23:20:41.405879+00:00",
+  "end_utc": "2026-09-16T23:24:27.209907+00:00",
+  "sum_verification_stage_seconds": 225.762,
+  "stage_counts": {
+    "compile": 7,
+    "audit": 1,
+    "leanchecker": 4,
+    "total": 12
+  },
+  "preflight_probes": "Separate Lean-version and Git-commit subprocesses are outside the twelve verification stages.",
+  "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "lean_toolchain": "leanprover/lean4:v4.33.0",
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "runtime_binary_sha256": {
+    "lean.exe": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+    "leanchecker.exe": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce"
+  },
+  "requested_threads": {
+    "LEAN_NUM_THREADS": "1",
+    "compiler_and_audit_flags": [
+      "-j1",
+      "-M8192"
+    ],
+    "checker_flags": [
+      "--verbose"
+    ]
+  },
+  "thread_scope": "Requests recorded by the helper, not a measurement of internal operating-system thread counts; no checker compiler-memory-flag claim.",
+  "fresh_custom_compilation": true,
+  "private_object_reuse": false,
+  "shared_cache": {
+    "policy": "Supplied Mathlib and dependency caches used read-only; source/object/log writes are confined to the fresh output directory.",
+    "custom_lean_path_precedence": [
+      "<OUTPUT>/build",
+      "<OUTPUT>/src",
+      "<MATHLIB_CACHE>",
+      "<DEPENDENCY_CACHES>"
+    ],
+    "mathlib_head_checked_before_and_after_by_helper": true,
+    "all_shared_cache_bytes_rehashed": false,
+    "full_mathlib_rebuild_or_replay": false
+  },
+  "source_materialization": {
+    "actual_upstream_download_count": 4,
+    "included_bridge_copy_count": 3,
+    "audit_copy_count": 1,
+    "network_trace_retained": false,
+    "network_policy": "Pinned helper rejects redirects and requires HTTP 200 and the exact immutable raw URL; SHA-256 and Git blob checks protect accepted source bytes."
+  },
+  "sources": [
+    {
+      "module": "ErdosProblems.Erdos526.Core",
+      "relative_file": "ErdosProblems/Erdos526/Core.lean",
+      "sha256": "e9c17650004694011089d3e6bd0d1ce8897d9df02931f0ad5a6df4bd4551bec6",
+      "bytes": 130929,
+      "imports": [
+        "Mathlib"
+      ],
+      "kind": "download",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos526/Core.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos526/Core.lean",
+      "git_blob_sha1": "b9dd659ee3c993b1d9c215ef8a4725800823976f",
+      "observed_sha256": "e9c17650004694011089d3e6bd0d1ce8897d9df02931f0ad5a6df4bd4551bec6",
+      "observed_bytes": 130929,
+      "observed_git_blob_sha1": "b9dd659ee3c993b1d9c215ef8a4725800823976f",
+      "materialization": "Downloaded by the unchanged helper's default HTTPS fetch; materialized bytes independently rehashed for this export."
+    },
+    {
+      "module": "FiniteHeadBridge",
+      "relative_file": "FiniteHeadBridge.lean",
+      "sha256": "fd698364426e7c4b17a9033bee19f2dfdc220775de9549b80acd9bcab533e728",
+      "bytes": 7815,
+      "imports": [
+        "ErdosProblems.Erdos526.Core"
+      ],
+      "kind": "included_bridge",
+      "observed_sha256": "fd698364426e7c4b17a9033bee19f2dfdc220775de9549b80acd9bcab533e728",
+      "observed_bytes": 7815,
+      "materialization": "Copied unchanged from the published package."
+    },
+    {
+      "module": "ErdosProblems.Erdos526.Weighted",
+      "relative_file": "ErdosProblems/Erdos526/Weighted.lean",
+      "sha256": "3491ae1cc183f815eb227d9993646028155985e94dd36a7e5d2aaa8e4633eb57",
+      "bytes": 8114,
+      "imports": [
+        "Mathlib"
+      ],
+      "kind": "download",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos526/Weighted.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos526/Weighted.lean",
+      "git_blob_sha1": "1fcbf5abf7b98138f100da29596b685e4bd02691",
+      "observed_sha256": "3491ae1cc183f815eb227d9993646028155985e94dd36a7e5d2aaa8e4633eb57",
+      "observed_bytes": 8114,
+      "observed_git_blob_sha1": "1fcbf5abf7b98138f100da29596b685e4bd02691",
+      "materialization": "Downloaded by the unchanged helper's default HTTPS fetch; materialized bytes independently rehashed for this export."
+    },
+    {
+      "module": "ErdosProblems.Erdos526.Shepp",
+      "relative_file": "ErdosProblems/Erdos526/Shepp.lean",
+      "sha256": "9ed140f4c5c401e812809598b7ab05584088cb8e55abafec7edf6142e85c6ab7",
+      "bytes": 108308,
+      "imports": [
+        "ErdosProblems.Erdos526.Core",
+        "ErdosProblems.Erdos526.Weighted"
+      ],
+      "kind": "download",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos526/Shepp.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos526/Shepp.lean",
+      "git_blob_sha1": "8a101d1bb69a0e8355e41bb8c6851e5d50eb8477",
+      "observed_sha256": "9ed140f4c5c401e812809598b7ab05584088cb8e55abafec7edf6142e85c6ab7",
+      "observed_bytes": 108308,
+      "observed_git_blob_sha1": "8a101d1bb69a0e8355e41bb8c6851e5d50eb8477",
+      "materialization": "Downloaded by the unchanged helper's default HTTPS fetch; materialized bytes independently rehashed for this export."
+    },
+    {
+      "module": "ErdosProblems.Erdos526",
+      "relative_file": "ErdosProblems/Erdos526.lean",
+      "sha256": "34220f4246a09f4cbfd1ca406309deab2f0e1b6d719da25a4558dade6fab17cb",
+      "bytes": 2089,
+      "imports": [
+        "ErdosProblems.Erdos526.Shepp"
+      ],
+      "kind": "download",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos526.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos526.lean",
+      "git_blob_sha1": "7a805d25b8f3913aef5730b7d97502c67e20533c",
+      "observed_sha256": "34220f4246a09f4cbfd1ca406309deab2f0e1b6d719da25a4558dade6fab17cb",
+      "observed_bytes": 2089,
+      "observed_git_blob_sha1": "7a805d25b8f3913aef5730b7d97502c67e20533c",
+      "materialization": "Downloaded by the unchanged helper's default HTTPS fetch; materialized bytes independently rehashed for this export."
+    },
+    {
+      "module": "StrictOnceCriterion",
+      "relative_file": "StrictOnceCriterion.lean",
+      "sha256": "fc2888a6b794acfbcc5256d3945ee40f4b20ed15df62030d16eee0577cdda7ea",
+      "bytes": 901,
+      "imports": [
+        "ErdosProblems.Erdos526",
+        "FiniteHeadBridge"
+      ],
+      "kind": "included_bridge",
+      "observed_sha256": "fc2888a6b794acfbcc5256d3945ee40f4b20ed15df62030d16eee0577cdda7ea",
+      "observed_bytes": 901,
+      "materialization": "Copied unchanged from the published package."
+    },
+    {
+      "module": "LargeArcBridge",
+      "relative_file": "LargeArcBridge.lean",
+      "sha256": "132de51db0f2ee4eea092788f941df3112e48c7d2741a6597c4d9a217d5382b9",
+      "bytes": 9406,
+      "imports": [
+        "StrictOnceCriterion"
+      ],
+      "kind": "included_bridge",
+      "observed_sha256": "132de51db0f2ee4eea092788f941df3112e48c7d2741a6597c4d9a217d5382b9",
+      "observed_bytes": 9406,
+      "materialization": "Copied unchanged from the published package."
+    }
+  ],
+  "audit": {
+    "module": "Audit526Bridge",
+    "file": "Audit526Bridge.lean",
+    "sha256": "c1fa71fbb801b2fa6ae32bcfe4afcedc46eaf6e07336631d98acf2539fb62d89",
+    "declarations": [
+      "Erdos526.erdos_526_resolution_for_rearrangement",
+      "JSP422FiniteHead.map_splice",
+      "JSP422FiniteHead.measureReal_head_miss",
+      "JSP422FiniteHead.head_miss_positive",
+      "JSP422FiniteHead.coversFrom_of_ae_spliced_once",
+      "JSP422FiniteHead.measure_coversFrom_eq_one_of_once",
+      "JSP422FiniteHead.once_eq_one_iff_full_eq_one",
+      "JSP422FiniteHead.strict_once_criterion",
+      "JSP422FiniteHead.circle_dist_le_half",
+      "JSP422FiniteHead.eq_half_of_norm_ge",
+      "JSP422FiniteHead.eq_antipode_of_not_mem_unit_arc",
+      "JSP422FiniteHead.ae_fixedPoint_tail_hit",
+      "JSP422FiniteHead.once_eq_one_of_unit_arc",
+      "JSP422FiniteHead.once_eq_one_of_large_arc",
+      "JSP422FiniteHead.once_eq_one_of_exists_ge_one",
+      "JSP422FiniteHead.unrestricted_once_criterion",
+      "JSP422FiniteHead.unrestricted_once_exists_rearrangement"
+    ],
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "observed_sha256": "c1fa71fbb801b2fa6ae32bcfe4afcedc46eaf6e07336631d98acf2539fb62d89"
+  },
+  "events": [
+    {
+      "stage": "compile",
+      "module": "ErdosProblems.Erdos526.Core",
+      "start_utc": "2026-09-16T23:20:41.405879+00:00",
+      "exit_code": 0,
+      "seconds": 30.97,
+      "end_utc": "2026-09-16T23:21:12.376078+00:00",
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<OUTPUT>/build/ErdosProblems/Erdos526/Core.olean",
+        "ErdosProblems/Erdos526/Core.lean"
+      ],
+      "log": "e2e-logs/00-compile-ErdosProblems.Erdos526.Core.log",
+      "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "log_bytes": 0,
+      "log_redactions": [],
+      "logs_copied_byte_for_byte": true
+    },
+    {
+      "stage": "compile",
+      "module": "FiniteHeadBridge",
+      "start_utc": "2026-09-16T23:21:12.377764+00:00",
+      "exit_code": 0,
+      "seconds": 15.19,
+      "end_utc": "2026-09-16T23:21:27.568136+00:00",
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<OUTPUT>/build/FiniteHeadBridge.olean",
+        "FiniteHeadBridge.lean"
+      ],
+      "log": "e2e-logs/01-compile-FiniteHeadBridge.log",
+      "original_log_sha256": "400544e6a6d19abd2c370d73f2ede7900915befc243ad6ce3e2e7455b01ee694",
+      "published_log_sha256": "400544e6a6d19abd2c370d73f2ede7900915befc243ad6ce3e2e7455b01ee694",
+      "log_bytes": 218,
+      "log_redactions": [],
+      "logs_copied_byte_for_byte": true
+    },
+    {
+      "stage": "compile",
+      "module": "ErdosProblems.Erdos526.Weighted",
+      "start_utc": "2026-09-16T23:21:27.575469+00:00",
+      "exit_code": 0,
+      "seconds": 15.223,
+      "end_utc": "2026-09-16T23:21:42.799282+00:00",
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<OUTPUT>/build/ErdosProblems/Erdos526/Weighted.olean",
+        "ErdosProblems/Erdos526/Weighted.lean"
+      ],
+      "log": "e2e-logs/02-compile-ErdosProblems.Erdos526.Weighted.log",
+      "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "log_bytes": 0,
+      "log_redactions": [],
+      "logs_copied_byte_for_byte": true
+    },
+    {
+      "stage": "compile",
+      "module": "ErdosProblems.Erdos526.Shepp",
+      "start_utc": "2026-09-16T23:21:42.800532+00:00",
+      "exit_code": 0,
+      "seconds": 22.633,
+      "end_utc": "2026-09-16T23:22:05.434027+00:00",
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<OUTPUT>/build/ErdosProblems/Erdos526/Shepp.olean",
+        "ErdosProblems/Erdos526/Shepp.lean"
+      ],
+      "log": "e2e-logs/03-compile-ErdosProblems.Erdos526.Shepp.log",
+      "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "log_bytes": 0,
+      "log_redactions": [],
+      "logs_copied_byte_for_byte": true
+    },
+    {
+      "stage": "compile",
+      "module": "ErdosProblems.Erdos526",
+      "start_utc": "2026-09-16T23:22:05.435544+00:00",
+      "exit_code": 0,
+      "seconds": 14.714,
+      "end_utc": "2026-09-16T23:22:20.150124+00:00",
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<OUTPUT>/build/ErdosProblems/Erdos526.olean",
+        "ErdosProblems/Erdos526.lean"
+      ],
+      "log": "e2e-logs/04-compile-ErdosProblems.Erdos526.log",
+      "original_log_sha256": "18c2a784b73bc69ee7e5ec58b806422c50e587f76d4e7f405c1b06eb37461ef3",
+      "published_log_sha256": "18c2a784b73bc69ee7e5ec58b806422c50e587f76d4e7f405c1b06eb37461ef3",
+      "log_bytes": 80,
+      "log_redactions": [],
+      "logs_copied_byte_for_byte": true
+    },
+    {
+      "stage": "compile",
+      "module": "StrictOnceCriterion",
+      "start_utc": "2026-09-16T23:22:20.154137+00:00",
+      "exit_code": 0,
+      "seconds": 14.937,
+      "end_utc": "2026-09-16T23:22:35.091568+00:00",
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<OUTPUT>/build/StrictOnceCriterion.olean",
+        "StrictOnceCriterion.lean"
+      ],
+      "log": "e2e-logs/05-compile-StrictOnceCriterion.log",
+      "original_log_sha256": "e1732e261c77a68750e3a5eb927430d0c39bdcfdf0be6881541474e40273ea9a",
+      "published_log_sha256": "e1732e261c77a68750e3a5eb927430d0c39bdcfdf0be6881541474e40273ea9a",
+      "log_bytes": 100,
+      "log_redactions": [],
+      "logs_copied_byte_for_byte": true
+    },
+    {
+      "stage": "compile",
+      "module": "LargeArcBridge",
+      "start_utc": "2026-09-16T23:22:35.094643+00:00",
+      "exit_code": 0,
+      "seconds": 15.858,
+      "end_utc": "2026-09-16T23:22:50.952998+00:00",
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<OUTPUT>/build/LargeArcBridge.olean",
+        "LargeArcBridge.lean"
+      ],
+      "log": "e2e-logs/06-compile-LargeArcBridge.log",
+      "original_log_sha256": "d9b489a3e2216397754618d27d569718f30a78be459cb655964c71293dfcc961",
+      "published_log_sha256": "d9b489a3e2216397754618d27d569718f30a78be459cb655964c71293dfcc961",
+      "log_bytes": 325,
+      "log_redactions": [],
+      "logs_copied_byte_for_byte": true
+    },
+    {
+      "stage": "audit",
+      "module": "Audit526Bridge",
+      "start_utc": "2026-09-16T23:22:50.956501+00:00",
+      "exit_code": 0,
+      "seconds": 14.723,
+      "end_utc": "2026-09-16T23:23:05.680019+00:00",
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/lean.exe",
+        "-j1",
+        "-M8192",
+        "-o",
+        "<OUTPUT>/build/Audit526Bridge.olean",
+        "Audit526Bridge.lean"
+      ],
+      "log": "e2e-logs/07-audit-Audit526Bridge.log",
+      "original_log_sha256": "37fbeff7ba184e3d46426ac6be5ad6dfc686e96711629f6a66255449e47034b3",
+      "published_log_sha256": "37fbeff7ba184e3d46426ac6be5ad6dfc686e96711629f6a66255449e47034b3",
+      "log_bytes": 6865,
+      "log_redactions": [],
+      "logs_copied_byte_for_byte": true
+    },
+    {
+      "stage": "leanchecker",
+      "module": "ErdosProblems.Erdos526",
+      "start_utc": "2026-09-16T23:23:05.683396+00:00",
+      "exit_code": 0,
+      "seconds": 37.478,
+      "end_utc": "2026-09-16T23:23:43.161537+00:00",
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/leanchecker.exe",
+        "--verbose",
+        "ErdosProblems.Erdos526"
+      ],
+      "log": "e2e-logs/08-leanchecker-ErdosProblems.Erdos526.log",
+      "original_log_sha256": "9f88b32ab94de3a62ef6fb3787ac6b36e402e64ce700ebb77dc96617ffdaec61",
+      "published_log_sha256": "9f88b32ab94de3a62ef6fb3787ac6b36e402e64ce700ebb77dc96617ffdaec61",
+      "log_bytes": 152,
+      "log_redactions": [],
+      "logs_copied_byte_for_byte": true
+    },
+    {
+      "stage": "leanchecker",
+      "module": "FiniteHeadBridge",
+      "start_utc": "2026-09-16T23:23:43.164417+00:00",
+      "exit_code": 0,
+      "seconds": 14.539,
+      "end_utc": "2026-09-16T23:23:57.704297+00:00",
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/leanchecker.exe",
+        "--verbose",
+        "FiniteHeadBridge"
+      ],
+      "log": "e2e-logs/09-leanchecker-FiniteHeadBridge.log",
+      "original_log_sha256": "2d9e2c08058ca63ee075e96e90cf136883868b70539f24db1fb9f8d8f1f6d126",
+      "published_log_sha256": "2d9e2c08058ca63ee075e96e90cf136883868b70539f24db1fb9f8d8f1f6d126",
+      "log_bytes": 27,
+      "log_redactions": [],
+      "logs_copied_byte_for_byte": true
+    },
+    {
+      "stage": "leanchecker",
+      "module": "StrictOnceCriterion",
+      "start_utc": "2026-09-16T23:23:57.708283+00:00",
+      "exit_code": 0,
+      "seconds": 14.944,
+      "end_utc": "2026-09-16T23:24:12.653032+00:00",
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/leanchecker.exe",
+        "--verbose",
+        "StrictOnceCriterion"
+      ],
+      "log": "e2e-logs/10-leanchecker-StrictOnceCriterion.log",
+      "original_log_sha256": "a01b1a3e0f0d5aabc66a48fab269e0594d30ce27f6b816fc9586852e6472daa6",
+      "published_log_sha256": "a01b1a3e0f0d5aabc66a48fab269e0594d30ce27f6b816fc9586852e6472daa6",
+      "log_bytes": 30,
+      "log_redactions": [],
+      "logs_copied_byte_for_byte": true
+    },
+    {
+      "stage": "leanchecker",
+      "module": "LargeArcBridge",
+      "start_utc": "2026-09-16T23:24:12.656190+00:00",
+      "exit_code": 0,
+      "seconds": 14.553,
+      "end_utc": "2026-09-16T23:24:27.209907+00:00",
+      "recorded_command_with_paths_redacted": [
+        "<LEAN_BIN>/leanchecker.exe",
+        "--verbose",
+        "LargeArcBridge"
+      ],
+      "log": "e2e-logs/11-leanchecker-LargeArcBridge.log",
+      "original_log_sha256": "d1213466eb38f66c1f9c2fdc2adb2e5fba105e30cb1c95d6c7615309fda9cfef",
+      "published_log_sha256": "d1213466eb38f66c1f9c2fdc2adb2e5fba105e30cb1c95d6c7615309fda9cfef",
+      "log_bytes": 25,
+      "log_redactions": [],
+      "logs_copied_byte_for_byte": true
+    }
+  ],
+  "actual_axioms": {
+    "Erdos526.erdos_526_resolution_for_rearrangement": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.map_splice": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.measureReal_head_miss": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.head_miss_positive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.coversFrom_of_ae_spliced_once": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.measure_coversFrom_eq_one_of_once": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.once_eq_one_iff_full_eq_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.strict_once_criterion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.circle_dist_le_half": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.eq_half_of_norm_ge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.eq_antipode_of_not_mem_unit_arc": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.ae_fixedPoint_tail_hit": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.once_eq_one_of_unit_arc": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.once_eq_one_of_large_arc": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.once_eq_one_of_exists_ge_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.unrestricted_once_criterion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP422FiniteHead.unrestricted_once_exists_rearrangement": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "actual_axiom_reports_raw": {
+    "Erdos526.erdos_526_resolution_for_rearrangement": "'Erdos526.erdos_526_resolution_for_rearrangement' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.map_splice": "'JSP422FiniteHead.map_splice' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.measureReal_head_miss": "'JSP422FiniteHead.measureReal_head_miss' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.head_miss_positive": "'JSP422FiniteHead.head_miss_positive' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.coversFrom_of_ae_spliced_once": "'JSP422FiniteHead.coversFrom_of_ae_spliced_once' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.measure_coversFrom_eq_one_of_once": "'JSP422FiniteHead.measure_coversFrom_eq_one_of_once' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.once_eq_one_iff_full_eq_one": "'JSP422FiniteHead.once_eq_one_iff_full_eq_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.strict_once_criterion": "'JSP422FiniteHead.strict_once_criterion' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.circle_dist_le_half": "'JSP422FiniteHead.circle_dist_le_half' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.eq_half_of_norm_ge": "'JSP422FiniteHead.eq_half_of_norm_ge' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.eq_antipode_of_not_mem_unit_arc": "'JSP422FiniteHead.eq_antipode_of_not_mem_unit_arc' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.ae_fixedPoint_tail_hit": "'JSP422FiniteHead.ae_fixedPoint_tail_hit' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.once_eq_one_of_unit_arc": "'JSP422FiniteHead.once_eq_one_of_unit_arc' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.once_eq_one_of_large_arc": "'JSP422FiniteHead.once_eq_one_of_large_arc' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.once_eq_one_of_exists_ge_one": "'JSP422FiniteHead.once_eq_one_of_exists_ge_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.unrestricted_once_criterion": "'JSP422FiniteHead.unrestricted_once_criterion' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "JSP422FiniteHead.unrestricted_once_exists_rearrangement": "'JSP422FiniteHead.unrestricted_once_exists_rearrangement' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  },
+  "actual_checker_modules": {
+    "ErdosProblems.Erdos526": [
+      "ErdosProblems.Erdos526",
+      "ErdosProblems.Erdos526.Weighted",
+      "ErdosProblems.Erdos526.Shepp",
+      "ErdosProblems.Erdos526.Core"
+    ],
+    "FiniteHeadBridge": [
+      "FiniteHeadBridge"
+    ],
+    "StrictOnceCriterion": [
+      "StrictOnceCriterion"
+    ],
+    "LargeArcBridge": [
+      "LargeArcBridge"
+    ]
+  },
+  "actual_checker_union": [
+    "ErdosProblems.Erdos526",
+    "ErdosProblems.Erdos526.Core",
+    "ErdosProblems.Erdos526.Shepp",
+    "ErdosProblems.Erdos526.Weighted",
+    "FiniteHeadBridge",
+    "LargeArcBridge",
+    "StrictOnceCriterion"
+  ],
+  "actual_checker_union_count": 7,
+  "checker_scope": "Actual replaying lines parsed from each checker log; structured Lean Name prefix selection, not raw string-prefix guessing.",
+  "history_preserved": {
+    "verification.json": "8806abe46d9a0fd0bbfd3efcf758642a38fcf080d4ced7dda85c5cd44efc6bc1",
+    "logs/v2-failed-01-compile-FiniteHeadBridge.log": "c124234c0ae2563fd66b6d76a261d0ade46407e3d2b7b9cb99d1f1d02d03aa4b",
+    "logs/v3-failed-01-compile-FiniteHeadBridge.log": "50673cebf1dd87d3322fd2a572d2c2880d026edc9141e4ae51b6f555f2cd79f2",
+    "logs/v4-00-compile-ErdosProblems.Erdos526.Core.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/v4-01-compile-FiniteHeadBridge.log": "400544e6a6d19abd2c370d73f2ede7900915befc243ad6ce3e2e7455b01ee694",
+    "logs/v4-02-compile-ErdosProblems.Erdos526.Weighted.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/v4-03-compile-ErdosProblems.Erdos526.Shepp.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/v4-04-compile-ErdosProblems.Erdos526.log": "18c2a784b73bc69ee7e5ec58b806422c50e587f76d4e7f405c1b06eb37461ef3",
+    "logs/v4-05-compile-StrictOnceCriterion.log": "e1732e261c77a68750e3a5eb927430d0c39bdcfdf0be6881541474e40273ea9a",
+    "logs/v4-failed-06-compile-LargeArcBridge.log": "25030b6392127967ddc5c436b31d592dbd7086dd73774658c87cc06f8fe41278",
+    "logs/v5-06-compile-LargeArcBridge.log": "d9b489a3e2216397754618d27d569718f30a78be459cb655964c71293dfcc961",
+    "logs/v5-07-audit-Audit526Bridge.log": "37fbeff7ba184e3d46426ac6be5ad6dfc686e96711629f6a66255449e47034b3",
+    "logs/v5-08-leanchecker-ErdosProblems.Erdos526.log": "9f88b32ab94de3a62ef6fb3787ac6b36e402e64ce700ebb77dc96617ffdaec61",
+    "logs/v5-09-leanchecker-FiniteHeadBridge.log": "2d9e2c08058ca63ee075e96e90cf136883868b70539f24db1fb9f8d8f1f6d126",
+    "logs/v5-10-leanchecker-StrictOnceCriterion.log": "a01b1a3e0f0d5aabc66a48fab269e0594d30ce27f6b816fc9586852e6472daa6",
+    "logs/v5-11-leanchecker-LargeArcBridge.log": "d1213466eb38f66c1f9c2fdc2adb2e5fba105e30cb1c95d6c7615309fda9cfef"
+  },
+  "limitations": [
+    "Uses Lean's own kernel with the imported cached Mathlib environment, not an independently implemented checker.",
+    "Does not replay every Mathlib module from source.",
+    "This actual execution is on Windows, not Linux.",
+    "No human referee attestation, official acceptance, priority, recipient, eligibility or award determination."
+  ]
+}
